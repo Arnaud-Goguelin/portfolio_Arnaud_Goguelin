@@ -1,0 +1,127 @@
+[
+    {
+        "Id": "3db2bc5ba7428675",
+        "Title": "Intégration de contenu en HTML et CSS natifs",
+        "Description": "Le but de ce projet est d'être capable d'intégrer une interface responsive, en respectant fidèlement une maquette, en utilisant les langages HTML et CSS natifs uniquement",
+        "Difficulties": "Respect de la maquette à l'approche des breakpoints",
+        "Solutions": "Utilisation d'unité de mesures relatives",
+        "skills": [
+            "Intégration de contenu conformément à une maquette",
+            "Intégrer une interface responsive",
+            "Maîtrise de HTML et CSS",
+            "Connaissances de bases de GitHub"
+        ],
+        "ImageURL": "../src/assets/integrationResponsive.png",
+        "GitHubLink": "https://github.com/Arnaud-Goguelin/OC_Projet2_Booki",
+        "Tags": [
+            "Front-End",
+            "Responsive"
+        ]
+    },
+    {
+        "Id": "6f84c679ab6cd815",
+        "Title": "Portfolio d'architecte en javascript natif",
+        "Description": "Le but de ce projet est d'intégrer du contenu de manière dynamique en JavaScript natif depuis une base de données ou du contenu ajouté par l'utilisateur.",
+        "Difficulties": "Utilisation des syntaxes modernes (ajout/suppression d'attributs par exemple) et choix de la méthode 'for' appropriée (for, for in, for of, forEach).",
+        "Solutions": "Lecture de la documentations et essaies dans le code pour mieux comprendre le fonctionnement des méthodes.",
+        "skills": [
+            "Connaissances de bases de JavaScript",
+            "Manipulation des objets JavaScript",
+            "Manipuler les éléments du DOM",
+            "Gérer les évènements",
+            "Utilisation de la méthode fetch avec les méthodes GET, POST et DELETE",
+            "Gérer une authentification d'utilisateur"
+        ],
+        "ImageURL": "../src/assets/appliJavaScriptNatif.png",
+        "GitHubLink": "https://github.com/Arnaud-Goguelin/OC_Projet3_Portfolio_Architecte",
+        "Tags": [
+            "Front-End",
+            "JavaScript"
+        ]
+    },
+    {
+        "Id": "f0ef748a81c23c4b",
+        "Title": "Optimisation et debug",
+        "Description": "Le but de ce projet est d'optimiser les performances d'un site web existant, son référencement et de le rendre accessible à tous.",
+        "Difficulties": "Optimiser les performances sans avoir accès au back-end.",
+        "Solutions": "Utilisation de ressources distantes via les CDN",
+        "skills": [
+            "Bonnes pratiques de SEO (sémantiques HTML, faciliter le travail des robots d'indexations, balises meta et link : pour les réseaux sociaux, les micros données, les crawlers, les liens externes).",
+            "Sémentique HTML et Architecture de l'information",
+            "Accessibilité d'une application web (sémantique HTML, attributs ARIA, navigation, design)",
+            "Bonne pratiques de performances (Utilisation des ressources asynchrones ou différées, traitement des images, minifications des ressources statiques)"
+        ],
+        "ImageURL": "../src/assets/optimisationDebug.png",
+        "GitHubLink": "https://github.com/Arnaud-Goguelin/OC_Projet5_Debug_Optimisation_Portfolio_Photographe",
+        "Tags": [
+            "Front-End",
+            "SEO",
+            "Accessibilité",
+            "Optimisation"
+        ]
+    },
+    {
+        "Id": "28bf26b8ccddc646",
+        "Title": "Application React de location immobilière",
+        "Description": "Le but de ce projet est de développer de manière dynamique une interface avec React et Sass",
+        "Difficulties": "La manque d'informations sur la maquette et dans l'énnoncé du projet.",
+        "Solutions": "Prises d'initiatives et création de composants supplémentaires (pagination, carousel au défilement automatique, préparation à l'utilisation d'une API) pour une application plus ergonomique",
+        "skills": [
+            "Connaissances de bases React",
+            "Connaissances de bases Sass",
+            "Connaissances de bases Annimation CSS",
+            "Création de Hooks personnalisés"
+        ],
+        "ImageURL": "../src/assets/appliReact.png",
+        "GitHubLink": "https://github.com/Arnaud-Goguelin/OC_Projet6_React_App_Location_Immo",
+        "Tags": [
+            "Front-End",
+            "React",
+            "Sass"
+        ]
+    },
+    {
+        "Id": "cb29c00f8bdca210",
+        "Title": "Backend en Node.JS d'une application de notation de livres",
+        "Description": "Le but de ce projet est développez le backend d'une application en respectant la logique définie dans les spécifications fonctionnelles et techniques, d'assurer la sécurité de cette application et de sa base de données.",
+        "Difficulties": "Traitement des images et récupération d'un fichier au nom unique",
+        "Solutions": "Rattacher les propriétés des objets à la requête",
+        "skills": [
+            "Connaissances de bases de Node.JS et Express",
+            "Manipulation des objets JavaScript",
+            "Implémenter un modèle logique de données conformément à la réglementation",
+            "Mettre en œuvre des opérations CRUD",
+            "Stocker des données",
+            "Bonnes pratiques de green IT via le traitement d'image",
+            "Sécurisation d'une application web (chiffrement, hashage, limiter, sanitizer, validator)",
+            "Gestion de l'authentification (contrôles des logins, génération de token hashés)",
+            "Création d'une base de données, des collections et modèles et configuration des droits d'utilisateurs"
+        ],
+        "ImageURL": "../src/assets/backend.png",
+        "GitHubLink": "https://github.com/Arnaud-Goguelin/OC_Projet7_Backend_App_Notation_de_Livres",
+        "Tags": [
+            "Back-end",
+            "Node.JS",
+            "Express",
+            "Mongoose",
+            "MongoDB"
+        ]
+    },
+    {
+        "Id": "db5dbf0bec429647",
+        "Title": "Mon Portfolio",
+        "Description": "string",
+        "Difficulties": "string",
+        "Solutions": "string",
+        "skills": [
+            "string",
+            "string"
+        ],
+        "ImageURL": "string",
+        "GitHubLink": "string",
+        "Tags": [
+            "string",
+            "string"
+        ]
+    }
+]
