@@ -1,0 +1,22 @@
+[
+    {
+        "title": "Accueil",
+        "imageName": "accueil.png"
+    },
+    {
+        "title": "Profil",
+        "imageName": "profil.png"
+    },
+    {
+        "title": "Projets",
+        "imageName": "project.png"
+    },
+    {
+        "title": "Objectifs",
+        "imageName": "objectives.png"
+    },
+    {
+        "title": "Contact",
+        "imageName": "contact.png"
+    }
+]

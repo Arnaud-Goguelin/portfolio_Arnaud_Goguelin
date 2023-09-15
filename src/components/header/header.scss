@@ -1,0 +1,13 @@
+@use '../../variables';
+
+header {
+    height: 600px;
+    width: 15%;
+    background-color: red;
+    padding: 30px 50px;
+    border-radius: 0 20px 20px 0;
+
+    nav {
+        margin: auto;
+    }
+}
