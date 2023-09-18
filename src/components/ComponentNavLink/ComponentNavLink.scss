@@ -1,0 +1,56 @@
+@use '../../variables';
+
+.nav__linkContainer {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    >img {
+        border: 2px solid variables.$tertiary-color;
+        transition: border 0.5s ease;
+    }
+}
+
+.nav__navLink {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+    text-decoration: none;
+    color: black;
+    transform: translate(var(--tx, 0), var(--ty, 0));
+    opacity: var(--opacity, 0.25);
+    transition: all 0.2s ease-in-out;
+
+    >img {
+        height: 50px;
+        width: 50px;
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+        border-radius: 50%;
+        padding: 15px;
+        margin: 0 30px 0 0;
+        transition: fill 0.3s;
+    }
+
+    &:hover {
+        color: variables.$tertiary-color;
+        font-weight: 500;
+        transition: all 0.5s ease;
+    }
+
+    &.active {
+        opacity: 1;
+        color: variables.$tertiary-color;
+        font-weight: 500;
+        transition: all 0.5s ease;
+
+        >img {
+            border: 2px solid variables.$tertiary-color;
+            transition: border 0.5s ease;
+        }
+    }
+}

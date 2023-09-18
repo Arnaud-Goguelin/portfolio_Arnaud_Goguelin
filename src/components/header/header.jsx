@@ -1,18 +1,16 @@
 import './header.scss'
 
 import navDatas from '../../data/navDatas.json'
-import NavLink from '../navLink/navLink'
-
-console.log(navDatas)
+import ComponentNavLink from '../ComponentNavLink/ComponentNavLink'
 
 function Header() {
 
     return(
         <header className='header'>
-            <nav >
+            <nav className='header__nav'>
             {
                 navDatas.map((data) => 
-                    <NavLink 
+                    <ComponentNavLink 
                         key={`${navDatas.indexOf(data)} - ${data.title}`}
                         title={data.title}
                         imageName={data.imageName}

@@ -58,16 +58,15 @@ table {
 /* fin du CSS reset */
 
 .globalStyle {
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  max-width: 1840px;
+  max-width: 100vw;
   height: 100vh;
-  margin: auto;
   font-family: variables.$primary-font-family;
   font-weight: 300;
   font-size: 1em;
-  background-color: variables.$background-color;
+  background: linear-gradient(0deg, variables.$background-color, variables.$secondary-color 30%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   @media (max-width: calc(variables.$extraLarge-screen - 1px)) {
     width: 90%;
