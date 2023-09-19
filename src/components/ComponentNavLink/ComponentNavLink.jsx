@@ -50,7 +50,7 @@ function ComponentNavLink({title, imageName}) {
     }
 
     return (
-      <span 
+      <div 
         ref = {linkContainer} 
         className='nav__linkContainer'
         onMouseMove={(event) => handleMouseMove(event)}
@@ -64,7 +64,7 @@ function ComponentNavLink({title, imageName}) {
         >
             <img src={`/assets/${imageName}`} alt='' /> {title}
         </NavLink>
-      </span>
+      </div>
     )
 }
 

@@ -23,14 +23,24 @@
 .landingPage__container {
     width: 90%;
     height: 70%;
-    border: 2px solid variables.$quaternary-color;
-    // border-radius: 30% 0% 0% 80%;
+    // border: 2px solid variables.$quaternary-color;
+    border-radius: 30% 0% 0% 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
+    background-color: #c9c0c1;
+    transform: translateY(-100px);
+    opacity: 0;
+    filter: url('filter.svg#goo');
     // background: linear-gradient(200deg, transparent, rgba(255, 255, 255, 1));
     // box-shadow: -10px 15px 25px 10px rgba(0, 0, 0, 0.5);
     // animation: backgroundAnimation 15s ease infinite;
     // animation: backgroundAnimation 15s ease infinite;
+
+    &.toDisplay {
+        opacity: 1;
+        transform: translateY(100px);
+        transition: all 5s ease;
+    }
 }
