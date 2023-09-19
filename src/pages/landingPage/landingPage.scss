@@ -1,46 +1,38 @@
 @use '../../variables';
 
-@keyframes shadowAnimation {
-    50% {
-        box-shadow: -5px 10px 20px 10px rgba(0, 0, 0, 0.3);
-    }
-}
-
-@keyframes backgroundAnimation {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
 .landingPage__container {
-    width: 90%;
+    width: 90vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    filter: url(filter.svg#goo);
+}
+
+.toBeCrossed {
+    position: absolute;
+    top: -20px;
+    z-index: -2;
+    width: 80%;
+    height: 10%;
+    background-color: white;
+    border-radius: 30px;
+}
+
+.landingPage__content {
+    width: 80%;
     height: 70%;
-    // border: 2px solid variables.$quaternary-color;
-    border-radius: 30% 0% 0% 80%;
+    border-radius: 50px;
+    padding: 20px;
+    background-color: variables.$background-color;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #c9c0c1;
-    transform: translateY(-100px);
-    opacity: 0;
-    filter: url('filter.svg#goo');
-    // background: linear-gradient(200deg, transparent, rgba(255, 255, 255, 1));
-    // box-shadow: -10px 15px 25px 10px rgba(0, 0, 0, 0.5);
-    // animation: backgroundAnimation 15s ease infinite;
-    // animation: backgroundAnimation 15s ease infinite;
 
     &.toDisplay {
-        opacity: 1;
-        transform: translateY(100px);
-        transition: all 5s ease;
+        transform: translateY(130px);
+        transition: transform 1s ease;
     }
 }
