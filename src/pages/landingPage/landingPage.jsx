@@ -1,18 +1,16 @@
+
 import './landingPage.scss'
 
 function LandingPage() {
 
     return (
-        <>
-        <div className='landingPage__container'>
-            <div 
-                className='landingPage__content'
-            >
-                <h1>Arnaud Goguelin | Développeur web</h1>
-                <p>    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. !</p>
-            </div>
-        </div>
-        </>
+        <section className='landingPage__content'>
+            <h1>Arnaud Goguelin | <span>Développeur web</span></h1>
+            <p className='landingPage__bienvenue'>Bienvenue sur mon <strong>portfolio</strong>.</p>
+            <p>Je suis un <strong>développeur</strong> Javascript, codant avec<strong> React</strong> et <strong>Node.JS</strong>.</p> 
+            <p> Particulièrement intéressé par le <strong>back-end</strong>, je souhaite évoluer vers cette spécialisation.</p>
+            <p>Je vous invite à visiter mon portfolio, à découvrir plus en détails en mon profil, les projets que j'ai codé et mes objectifs d'apprentissage!</p>
+        </section>
     )
 }
 

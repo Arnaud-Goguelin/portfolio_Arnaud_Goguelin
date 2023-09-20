@@ -61,19 +61,23 @@ table {
   width: 100vw;
   height: 100vh;
   background:
-    linear-gradient(245deg, rgba(230, 230, 230, 1) 30%, rgba(0, 0, 0, 0.3)),
+    linear-gradient(245deg, rgba(230, 230, 230, 0.7) 30%, rgba(63, 157, 163, 0.8)),
     url(./noiseFilter.svg);
-}
-
-.globalStyle {
-  max-width: 100vw;
-  height: 100vh;
-  font-family: variables.$primary-font-family;
-  font-weight: 300;
-  font-size: 1em;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.globalStyle {
+  width: 80vw;
+  height: 70vh;
+  font-family: variables.$primary-font-family;
+  font-weight: 300;
+  font-size: 1em;
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.7);
+
+
 
   @media (max-width: calc(variables.$extraLarge-screen - 1px)) {
     width: 90%;
