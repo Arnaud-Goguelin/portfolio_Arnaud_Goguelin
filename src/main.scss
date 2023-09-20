@@ -61,7 +61,9 @@ table {
   width: 100vw;
   height: 100vh;
   background:
-    linear-gradient(245deg, rgba(230, 230, 230, 0.7) 30%, rgba(0, 0, 0, 0.3)),
+    radial-gradient(at right bottom,
+      rgba(0, 0, 0, 0.2),
+      rgba(255, 255, 255, 1)),
     url(./noiseFilter.svg);
   display: flex;
   justify-content: center;
@@ -69,15 +71,9 @@ table {
 }
 
 .globalStyle {
-  width: 80vw;
-  height: 70vh;
   font-family: variables.$primary-font-family;
-  font-weight: 300;
+  font-weight: 500;
   font-size: 1em;
-  background-color: rgba(255, 255, 255, 0.7);
-  box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.7);
-
-
 
   @media (max-width: calc(variables.$extraLarge-screen - 1px)) {
     width: 90%;

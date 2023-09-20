@@ -39,7 +39,7 @@
 
     &:hover {
         color: variables.$tertiary-color;
-        background-color: rgba(255, 255, 255, 0.5);
+        // background-color: rgba(255, 255, 255, 0.5);
         font-weight: 500;
         transition: all 0.5s ease;
     }
@@ -47,7 +47,7 @@
     &.active {
         opacity: 1;
         color: variables.$tertiary-color;
-        background-color: rgba(255, 255, 255, 0.5);
+        // background-color: rgba(255, 255, 255, 0.5);
         font-weight: 500;
         transition: all 0.5s ease;
 

@@ -5,7 +5,7 @@ function LandingPage() {
 
     return (
         <section className='landingPage__content'>
-            <h1>Arnaud Goguelin | <span>Développeur web</span></h1>
+            <h1>ARNAUD GOGUELIN | <span>DEVELOPPEUR WEB</span></h1>
             <p className='landingPage__bienvenue'>Bienvenue sur mon <strong>portfolio</strong>.</p>
             <p>Je suis un <strong>développeur</strong> Javascript, codant avec<strong> React</strong> et <strong>Node.JS</strong>.</p> 
             <p> Particulièrement intéressé par le <strong>back-end</strong>, je souhaite évoluer vers cette spécialisation.</p>
