@@ -21,8 +21,10 @@
     font-size: 1.5em;
     text-decoration: none;
     color: black;
+    border-radius: 20px;
+    padding: 0 10px;
     transform: translate(var(--tx, 0), var(--ty, 0));
-    opacity: var(--opacity, 0.25);
+    opacity: var(--opacity, 0.4);
     transition: all 0.2s ease-in-out;
 
     >img {
@@ -37,6 +39,7 @@
 
     &:hover {
         color: variables.$tertiary-color;
+        background-color: rgba(255, 255, 255, 0.5);
         font-weight: 500;
         transition: all 0.5s ease;
     }
@@ -44,6 +47,7 @@
     &.active {
         opacity: 1;
         color: variables.$tertiary-color;
+        background-color: rgba(255, 255, 255, 0.5);
         font-weight: 500;
         transition: all 0.5s ease;
 

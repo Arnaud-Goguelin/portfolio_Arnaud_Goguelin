@@ -1,26 +1,11 @@
-import { useRef, useEffect } from 'react';
-
 import './landingPage.scss'
 
 function LandingPage() {
 
-    const container = useRef(null)
-
-    function addCSSClass() {
-        const containerToSelected = container.current;
-        containerToSelected.classList.add('toDisplay')
-    }
-
-    useEffect(()=> {
-        addCSSClass()
-    }, [])
-
     return (
         <>
         <div className='landingPage__container'>
-            <div className='toBeCrossed'></div>
             <div 
-                ref = {container}
                 className='landingPage__content'
             >
                 <h1>Arnaud Goguelin | Développeur web</h1>

@@ -57,13 +57,20 @@ table {
 
 /* fin du CSS reset */
 
+.noiseBackground {
+  width: 100vw;
+  height: 100vh;
+  background:
+    linear-gradient(245deg, rgba(230, 230, 230, 1) 30%, rgba(0, 0, 0, 0.3)),
+    url(./noiseFilter.svg);
+}
+
 .globalStyle {
   max-width: 100vw;
   height: 100vh;
   font-family: variables.$primary-font-family;
   font-weight: 300;
   font-size: 1em;
-  // background: linear-gradient(0deg, variables.$background-color, variables.$secondary-color 30%);
   display: flex;
   justify-content: center;
   align-items: center;

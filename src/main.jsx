@@ -9,19 +9,21 @@ import './main.scss'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Router>
+    <div className='noiseBackground'>
       <Header />
       <main className='globalStyle'>
         <Routes>
           <Route path='/' element={<LandingPage />} />
-          {/* <Route path='/Profil' element={<TODO />} />
-          <Route path='/Projets' element={<TODO />} />
-          <Route path='/Projets/:id' element={<TODO />} />
-          <Route path='/Objectifs' element={<TODO />} />
-          <Route path='/Contact' element={<TODO />} />
-          <Route path='/*' element={<TODO />} /> */}
+          {/* <Route path='/Profil' element={<TODO />} /> */}
+          {/* <Route path='/Projets' element={<TODO />} /> */}
+          {/* <Route path='/Projets/:id' element={<TODO />} /> */}
+          {/* <Route path='/Objectifs' element={<TODO />} /> */}
+          {/* <Route path='/Contact' element={<TODO />} /> */}
+          {/* <Route path='/*' element={<TODO />} /> */}
         </Routes>
       </main>
       {/* <Footer /> */}
+      </div>
     </Router>
   </React.StrictMode>,
 )
