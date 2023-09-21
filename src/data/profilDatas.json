@@ -1,0 +1,39 @@
+[
+    {
+        "id": "Past20142022",
+        "title": "Mes expériences passées",
+        "paragraphs": [
+            "Ancien directeur adjoint d’hôtel, j’ai managé des équipes de 10 personnes. J’étais responsable de services réalisés 24h/24h et 365 jours par an.",
+            "Mes missions concernaient le recrutement du personnel, leur formation, la réalisation des plannings.",
+            "Avec mon ou ma n+1, j’étais garant de la bonne gestion de l’établissement, tant sur les coûts d’exploitation (réalisation de la comptabilité fournisseurs) que sur les chiffres d’affaires réalisés (gestion des comptes clients débiteurs).",
+            "Une bonne connaissance de la place où j’exerçais, et de mon mix client, était nécessaire pour assurer un revenue management cohérent et d'optimiser le taux d’occupation et le prix moyen de vente...",
+            "Mais ça c’était avant.",
+            "En 2022, j’ai pris la décision de changer de carrière, pour me dédier à une passion latente chez moi, vers laquelle je revenais toujours.",
+            "Je ne regrette pas mes expériences passées, elles m’ont beaucoup apporté en termes :"
+        ],
+        "skills": [
+            "de Communication,",
+            "d'Organisation,",
+            "de Prise de décision,",
+            "de Sens du service."
+        ]
+    },
+    {
+        "id": "Now2022toInfinite",
+        "title": "Mon profil actuel",
+        "paragraphs": [
+            "Avec une formation de développeur web chez Openclassroomsn, j'ai peu acquérir une base de compétences techniques solide pour rentrer dans le monde du numérique.",
+            "Ma reconvertion professionnelle est le fruit d'un travail réalisé en grande partie en autonomie.",
+            "Mais travailler en autonomie ne veut pas dire travailler seul. J'ai eu la chance d'être accompagné par un mentor.",
+            "J'ai ainsi pû approfondir avec lui mes connaissances dans certaines technologies.",
+            "Mes projets seront plus explicites qu'un long paragraphe pour vous prouver mes compétences techniques.",
+            "J'ai bien l'intention de continuer mon apprentissage dans le monde du numérique, mais cette première formation m'a permis de développer de nouvelles compétences:"
+        ],
+        "skills": [
+            "Adaptation,",
+            "Autonomie,",
+            "Apprentissage,",
+            "Résolution de problème."
+        ]
+    }
+]

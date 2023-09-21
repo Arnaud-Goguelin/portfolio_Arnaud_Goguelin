@@ -1,52 +1,47 @@
 import { useRef, useState } from 'react'
+import TextDisplay from '../../components/textDisplay/textDisplay'
 
+import profilDatas from '../../data/profilDatas.json'
 import './profilPage.scss'
 
 function ProfilPage() {
 
-    const timeBar = useRef(null)
+    const mobileContent = useRef(null)
+
     const [distance, setDistance] = useState(0);
-    // const profilContent = useRef(null)
 
-    // const [measuredWidth, setMeasuredWidth] = useState(0)
-
-    // useEffect(() => {
-    //     console.log(profilContent.current)
-
-    //     setMeasuredWidth(profilContent.current.scrollWidth);
-    //   }, [profilContent]);
-
-    //   console.log(measuredWidth)
-
+    
     function calculDistance() {
         window.onload = () => {
-        const timeBarToMove = timeBar.current
-            const rect = timeBarToMove.getBoundingClientRect();
+        const contentToMove = mobileContent.current
+            const rect = contentToMove.getBoundingClientRect();
             setDistance(rect.left)
     }}
     calculDistance()
-    console.log(distance)
 
     function handleMouseMouve(event) {
-        const timeBarToMove = timeBar.current
-        timeBarToMove.style.left = event.pageX - distance + 'px';
+        const contentToMove = mobileContent.current
+        const contentMeasured = contentToMove.childNodes[0].scrollWidth
+        contentToMove.style.left = event.pageX - Math.abs(distance) - contentMeasured + 'px';
     }
 
     return (
         <section 
-        className='profil__content'
-        // ref={profilContent}
+        className='profilPage__displayZone'
         onMouseMove={(event) => handleMouseMouve(event)}
         >
-            <div 
-                className='profil__timeBar' 
-                ref={timeBar}
-                // style={{ height: measuredHeight }}
-            ></div>
-
+            <div className='profilPage__mobile' ref={mobileContent}>
+                {profilDatas.map(data => (
+                    <TextDisplay 
+                        key={data.id}
+                        title={data.title}
+                        paragraphs={data.paragraphs}
+                        skills={data.skills}
+                    />
+                ))}
+            </div>
         </section>
     )
-
 }
 
 export default ProfilPage

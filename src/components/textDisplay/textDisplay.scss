@@ -1,0 +1,31 @@
+@use '../../variables';
+
+.contentToDisplay {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0 25px;
+
+    h2 {
+        margin: 0 0 100px 0;
+        font-size: 3.5em;
+        font-weight: 600;
+    }
+
+    p, li {
+        margin: 0 0 30px 0;
+        font-size: 1.8em;
+    }
+
+    .before__partOne {
+        font-size: 0.8em;
+    }
+
+    .before__partTwo {
+        font-size: 0.6em;
+    }
+
+    .before__partThree {
+        font-size: 0.4em;
+    }
+}
