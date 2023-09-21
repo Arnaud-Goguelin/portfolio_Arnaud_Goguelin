@@ -18,4 +18,29 @@
         overflow: hidden;
         left: -50%;
     }
+
+    .profilPage__arrowContainer {
+        margin: auto;
+        width: 50%;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.2em;
+
+        .profilPage__arrow {
+            width: 20px;
+            height: 20px;
+            border-top: 4px solid black;
+            border-right: 4px solid black;
+
+            &.right {
+                rotate: 45deg;
+            }
+
+            &.left {
+                rotate: 225deg
+            }
+        }
+    }
 }
