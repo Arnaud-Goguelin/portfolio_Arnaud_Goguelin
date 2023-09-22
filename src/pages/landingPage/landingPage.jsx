@@ -1,4 +1,3 @@
-
 import './landingPage.scss'
 
 function LandingPage() {

@@ -1,0 +1,42 @@
+@use '../../variables';
+
+.filterButton {
+    font-size: 1em;
+    font-weight: 600;
+    color: variables.$second-color;
+    background-color: variables.$first-color;
+
+    border-radius: 50px;
+    width: auto;
+    padding: 7px 15px;
+    transform: scale(1);
+    transition: all ease 1s;
+
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+        background-color: variables.$second-color;
+        color: variables.$first-color;
+        transform: scale(1.2);
+        transition: all ease 0.2s;
+    }
+
+    &.active {
+        background-color: variables.$second-color;
+        color: variables.$first-color;
+    }
+}
+
+// @media (max-width: variables.$large-screen) {
+//     padding: 5px 30px;
+// }
+
+// @media (max-width: variables.$medium-screen) {
+//     padding: 5px 20px;
+// }
+
+// @media (max-width: variables.$small-screen) {
+//     padding: 5px 5px;
+//     font-size: 0.8em;
+// }
