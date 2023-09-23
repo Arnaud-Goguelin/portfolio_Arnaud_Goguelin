@@ -40,9 +40,13 @@
         width: auto;
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
+        justify-content: flex-start;
         align-items: center;
-        overflow: scroll;
+        overflow-x: scroll;
+        /* Firefox */
+        scrollbar-width: none;
+        /* Chrome, Safari */
+        -webkit-scrollbar-width: none;
     }
 
     &__progressBar {
@@ -50,7 +54,7 @@
         bottom: 0;
         height: 8px;
         background: variables.$third-color;
-        width: 0%;
+        width: 0;
     }
 }
 

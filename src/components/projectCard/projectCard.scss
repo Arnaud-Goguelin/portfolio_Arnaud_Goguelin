@@ -1,11 +1,12 @@
 @use '../../variables';
 
 .projectGallery__card {
-    margin: 0 20px 20px 0;
-    height: 600px;
+    margin: 0 30px 0 0;
+    height: 700px;
     aspect-ratio: 1;
     border-radius: 10px;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent 30%);
+    border: 1px solid rgba(0, 0, 0, 0.7);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.3), transparent 30%);
     position: relative;
 
     // @media (max-width: calc(variables.$extraLarge-screen - 1px)) {

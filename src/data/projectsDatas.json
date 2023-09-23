@@ -11,7 +11,7 @@
             "Maîtrise de HTML et CSS",
             "Connaissances de bases de GitHub"
         ],
-        "imageURL": "../../../public/integrationResponsive.png",
+        "imageURL": "../../../public/assets/integrationResponsive.png",
         "gitHubLink": "https://github.com/Arnaud-Goguelin/OC_Projet2_Booki",
         "tags": [
             "Front-End",

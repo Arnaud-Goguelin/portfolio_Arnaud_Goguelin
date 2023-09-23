@@ -30,6 +30,7 @@ function ProfilPage() {
         const contentToMove = mobileContent.current;
         const rect = contentToMove.getBoundingClientRect();
         setPosition(rect.left)
+        //Ajout ou retrait de 20 pts à position lors de l'utilisation du clavier pour un défilement plus rapide
         if (event.keyCode === 37) {
             setPosition(position + 20)
             contentToMove.style.left = position + 'px'

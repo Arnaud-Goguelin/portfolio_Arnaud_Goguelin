@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 import './projectsPage.scss'
 
@@ -10,7 +10,8 @@ import ProjectCard from '../../components/projectCard/projectCard'
 function ProjectsPage() {
 
     const buttonsContainer = useRef(null)
-    const scrollBar = useRef(null)
+    const scrollBarToFill = useRef(null)
+    const movingGallery = useRef(null)
 
     
     const unusableTags = projectsData.map((project) => project.tags);
@@ -28,19 +29,75 @@ function ProjectsPage() {
         selectedButton.classList.add('active')
     }
 
-    function handleScroll() {
-        const scrollBar = scrollBar.current
-        console.log(scrollBar)
-        var quantityOfScroll = document.body.scrollTop;
-        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        var scrolled = (quantityOfScroll / height) * 100;
-        scrollBar.style.width = scrolled +'%';
+    const [ maxWidth, setMawWidth] = useState(0)
+
+    useEffect(() => {
+        const gallery = movingGallery.current;
+        setMawWidth(gallery.scrollWidth);
+    },[])
+
+    function handleWheel(event) {
+        const scrollBar = scrollBarToFill.current
+        const gallery = movingGallery.current;
+        // On récupère la valeur de scrollLeft de gallery 
+        // (soit le nombre de pixels le long desquels le contenu d'un élément a défilé depuis son bord gauche)
+        // et on y ajoute deltaY (la quantité de défilement vertical dans l'unité)
+        // verticale car tous les utilisateurs ne disposent pas de souris avec molettes horizontales.
+        const scrollLeft = gallery.scrollLeft += event.deltaY;
+        // On calcule ici le rapport de progression de scroll réalisés (scrollLeft) 
+        // par rapport à la largeur totale de gallery (scrollWidth).
+        // On le converti en % pour la valeur de width de scrollBar.
+        const scrolled = (scrollLeft / gallery.scrollWidth) * 100;
+
+        // La propriété width se réfère à la zone d'affichage de gallery (soit clientWidth)
+        // or nous nous référons à la largeur totale de gallery (soit scrollWidth).
+        // Nous devons donc convertir la progression sur la zone d'affichage
+        // pour qu'elle corresponde à la progression sur la largeur totale
+        // (autrement la scrollBar reste cantonnée au début du défilement)
+        const converterRatio = (gallery.scrollWidth  / gallery.clientWidth)
+        const newScrollBarWidth = scrolled*(1 + converterRatio)
+
+        // On limite la largeur de la scrollBar à la largeur maximale de gallery
+        if (((gallery.clientWidth*newScrollBarWidth)/100) >= maxWidth) {
+            scrollBar.style.width === 100 + '%'
+        } else {
+            scrollBar.style.width = newScrollBarWidth + '%';
+        }
+    }   
+
+    function handleKeyDown(event) {
+        const scrollBar = scrollBarToFill.current
+        let width = scrollBar.scrollWidth
+
+        const gallery = movingGallery.current;
+
+        if (event.keyCode === 37) {     
+            console.log(gallery)
+            const scrollLeft = gallery.scrollWidth -= 1;
+
+            const width = gallery.scrollWidth - gallery.clientWidth;
+            const width2 = (scrollLeft / width) * 100;
+
+            scrollBar.style.width = width2 + '%';
+        }
+        if (event.keyCode === 39) {     
+            console.log(width)
+  
+            // const scrollLeft = gallery.scrollLeft + event.deltaY;
+
+            // const width = gallery.scrollWidth - gallery.clientWidth;
+            // const scrolled = (scrollLeft / width) * 100;
+            width += 1
+            scrollBar.style.width = width + '%';
+            console.log(width)
+        }
     }
+
 
     return (
         <section 
             className='projectsPage'
-            onScroll={handleScroll}
+            onWheel={(event) => handleWheel(event)}
         >
             <div 
                 className='projectsPage__buttonsContainer'
@@ -60,6 +117,8 @@ function ProjectsPage() {
 
             <div
                 className='projectsPage__gallery'
+                ref={movingGallery}
+                onKeyDown={ (event) => handleKeyDown(event)}
             >
                 {
                     projectsData.map(({id, title, imageURL}) => (
@@ -73,29 +132,11 @@ function ProjectsPage() {
                 }
                 <div 
                     className='projectsPage__progressBar' 
-                    ref={scrollBar}
+                    ref={scrollBarToFill}
                 ></div>
             </div>
         </section>
     )
-
-//     <nav class="menu">
-//   <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open"/>
-//   <label class="menu-open-button" for="menu-open">
-//     <span class="hamburger hamburger-1"></span>
-//     <span class="hamburger hamburger-2"></span>
-//     <span class="hamburger hamburger-3"></span>
-//   </label>
-  
-//   <a href="#" class="menu-item"> <i class="fa fa-bar-chart"></i> </a>
-//   <a href="#" class="menu-item"> <i class="fa fa-plus"></i> </a>
-//   <a href="#" class="menu-item"> <i class="fa fa-heart"></i> </a>
-//   <a href="#" class="menu-item"> <i class="fa fa-envelope"></i> </a>
-//   <a href="#" class="menu-item"> <i class="fa fa-cog"></i> </a>
-//   <a href="#" class="menu-item"> <i class="fa fa-ellipsis-h"></i> </a>
-  
-// </nav>
-
 }
 
 export default ProjectsPage
