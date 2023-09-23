@@ -45,11 +45,6 @@
         overflow-x: scroll;
         scrollbar-width: thin;
         scrollbar-color: variables.$third-color variables.$second-color;
-
-        // /* Firefox */
-        // scrollbar-width: none;
-        // /* Chrome, Safari */
-        // -webkit-scrollbar-width: none;
     }
 
     &__progressBar {
