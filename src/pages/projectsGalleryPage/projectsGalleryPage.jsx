@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react'
 
-import './projectsPage.scss'
+import './projectsGalleryPage.scss'
 
 import projectsData from '../../data/projectsDatas.json'
 
