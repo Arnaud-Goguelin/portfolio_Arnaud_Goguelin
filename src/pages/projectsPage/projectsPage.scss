@@ -43,10 +43,13 @@
         justify-content: flex-start;
         align-items: center;
         overflow-x: scroll;
-        /* Firefox */
-        scrollbar-width: none;
-        /* Chrome, Safari */
-        -webkit-scrollbar-width: none;
+        scrollbar-width: thin;
+        scrollbar-color: variables.$third-color variables.$second-color;
+
+        // /* Firefox */
+        // scrollbar-width: none;
+        // /* Chrome, Safari */
+        // -webkit-scrollbar-width: none;
     }
 
     &__progressBar {
