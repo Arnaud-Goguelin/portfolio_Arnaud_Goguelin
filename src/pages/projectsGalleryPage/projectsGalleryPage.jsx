@@ -40,11 +40,12 @@ function ProjectsPage() {
     }
     //Gestion de l'évènement wheel
      function handleWheel(event) {
-        const gallery = movingGallery.current;
         // On récupère la valeur de scrollLeft de gallery 
         // (soit le nombre de pixels le long desquels le contenu d'un élément a défilé depuis son bord gauche)
         // et on y ajoute deltaY (la quantité de défilement vertical dans l'unité)
         // verticale car tous les utilisateurs ne disposent pas de souris avec molettes horizontales.
+
+        const gallery = movingGallery.current;
         return gallery.scrollLeft += event.deltaY;
     }   
 
@@ -95,10 +96,6 @@ function ProjectsPage() {
                         />
                     ))
                 }
-                <div 
-                    className='projectsPage__progressBar' 
-                    ref={scrollBarToFill}
-                ></div>
             </div>
         </section>
     )

@@ -3,8 +3,8 @@ import './landingPage.scss'
 function LandingPage() {
 
     return (
-        <section className='landingPage__content'>
-            <h1>ARNAUD GOGUELIN | <span>DEVELOPPEUR WEB</span></h1>
+        <section className='landingPage'>
+            <h1>ARNAUD GOGUELIN <br /><span>DEVELOPPEUR WEB</span></h1>
             <p className='landingPage__bienvenue'>Bienvenue sur mon <strong>portfolio</strong>.</p>
             <p>Je suis un <strong>développeur</strong> Javascript, codant avec<strong> React</strong> et <strong>Node.JS</strong>.</p> 
             <p> Particulièrement intéressé par le <strong>back-end</strong>, je souhaite évoluer vers cette spécialisation.</p>

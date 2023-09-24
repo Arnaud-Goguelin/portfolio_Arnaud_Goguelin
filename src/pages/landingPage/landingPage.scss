@@ -1,6 +1,6 @@
 @use '../../variables';
 
-.landingPage__content {
+.landingPage {
     margin: auto 0 auto 80px;
     width: 70%;
     height: 100%;
@@ -11,20 +11,22 @@
 
 
     h1 {
+        width: 100%;
         margin: 0 0 70px 0;
-        font-weight: 800;
-        font-size: 4.5em;
+        font-weight: 1000;
+        font-size: 5em;
 
         span {
-            color: variables.$first-color;
+            margin: 0 0 0 45%;
+            color: variables.$third-color;
         }
     }
 
-    .landingPage__bienvenue {
+    &__bienvenue {
         margin: 0 0 70px 0;
         font-size: 3em;
-        font-weight: 700;
-        color: variables.$first-color;
+        font-weight: 800;
+        color: variables.$third-color;
     }
 
     p {
@@ -34,8 +36,8 @@
     }
 
     p strong {
-        color: variables.$first-color;
-        font-weight: 700;
+        color: variables.$third-color;
+        font-weight: 800;
         transition: color 0.3s ease-in-out;
     }
 }

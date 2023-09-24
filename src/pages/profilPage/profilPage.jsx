@@ -44,7 +44,7 @@ function ProfilPage() {
 
     return (
         <section 
-            className='profilPage__displayZone'
+            className='profilPage'
             onMouseMove={(event) => handleMouseMouve(event)}
             onKeyDown={ (event) => handleKeyDown(event)}
             tabIndex={0}

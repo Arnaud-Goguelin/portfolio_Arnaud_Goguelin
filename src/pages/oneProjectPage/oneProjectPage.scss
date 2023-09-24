@@ -1,19 +1,108 @@
 @use '../../variables';
 
-.Housing__dropwdownContainer {
+.oneProjectPage {
+    position: relative;
+    margin: 80px auto 0 auto;
+    width: 70vw;
+    height: 70vh;
     display: flex;
     justify-content: space-between;
+    font-size: 1.5em;
 
-    @media (max-width: variables.$medium-screen) {
-        flex-direction: column;
-        margin: 0 0 30px 0;
-    }
+    &__returnLink {
+        width: 15%;
+        height: 20px;
+        padding: 10px 15px;
+        border-radius: 25px;
+        background-color: variables.$second-color;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.8em;
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
 
-    >div {
-        width: 47%;
+        &:hover {
+            color: variables.$third-color;
+            transition: color ease 0.2s;
+        }
 
-        @media (max-width: variables.$medium-screen) {
-            width: 100%;
+        .arrow {
+            height: 15px;
+            width: 15px;
+            border-top: 3px solid black;
+            border-right: 3px solid black;
+            rotate: 225deg;
         }
     }
+
+    &__projectImage {
+        object-fit: cover;
+        width: 40%;
+        height: 100%;
+        border-radius: 25px;
+        border: 2px solid black;
+    }
+
+    &__description {
+        width: 65%;
+        margin: 0 0 0 50px;
+
+        h3 {
+            width: 80%;
+            font-size: 2em;
+            font-weight: 1000;
+            font-variant-caps: small-caps;
+            color: variables.$third-color;
+        }
+
+        p {
+            margin: 15px 30px;
+        }
+
+        li {
+            margin: 10px 30px
+        }
+
+        .staticContent {
+            margin: 30px 0;
+            font-size: 1.5em;
+            font-weight: 800;
+            font-variant-caps: small-caps;
+            color: variables.$fourth-color;
+        }
+
+        a {
+            margin: 0 30px 0 0;
+
+            img {
+                margin: 50px 0 0 0;
+                padding: 10px;
+                border-radius: 40px;
+                width: 60px;
+                height: 60px;
+                background-color: transparent;
+                transition: background-color ease 1s;
+
+                &:hover {
+                    background-color: variables.$second-color;
+                    transition: background-color ease 0.5s;
+                }
+            }
+        }
+    }
+
+    // @media (max-width: variables.$medium-screen) {
+    //     flex-direction: column;
+    //     margin: 0 0 30px 0;
+    // }
+
+    // >div {
+    //     width: 47%;
+
+    //     @media (max-width: variables.$medium-screen) {
+    //         width: 100%;
+    //     }
+    // }
 }

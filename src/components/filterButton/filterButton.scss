@@ -4,7 +4,7 @@
     font-size: 1em;
     font-weight: 600;
     color: variables.$second-color;
-    background-color: variables.$first-color;
+    background-color: variables.$fourth-color;
 
     border-radius: 50px;
     width: auto;
@@ -17,14 +17,14 @@
 
     &:hover {
         background-color: variables.$second-color;
-        color: variables.$first-color;
+        color: variables.$fourth-color;
         transform: scale(1.2);
         transition: all ease 0.2s;
     }
 
     &.active {
         background-color: variables.$second-color;
-        color: variables.$first-color;
+        color: variables.$fourth-color;
     }
 }
 

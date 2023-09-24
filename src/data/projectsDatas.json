@@ -20,7 +20,7 @@
     },
     {
         "id": "6f84c679ab6cd815",
-        "title": "Portfolio d'architecte en javascript natif",
+        "title": "Portfolio d'architecte en javascript vanilla",
         "description": "Le but de ce projet est d'intégrer du contenu de manière dynamique en JavaScript natif depuis une base de données ou du contenu ajouté par l'utilisateur.",
         "difficulties": "Utilisation des syntaxes modernes (ajout/suppression d'attributs par exemple) et choix de la méthode 'for' appropriée (for, for in, for of, forEach).",
         "solutions": "Lecture de la documentations et essaies dans le code pour mieux comprendre le fonctionnement des méthodes.",
@@ -29,8 +29,8 @@
             "Manipulation des objets JavaScript",
             "Manipuler les éléments du DOM",
             "Gérer les évènements",
-            "Utilisation de la méthode fetch avec les méthodes GET, POST et DELETE",
-            "Gérer une authentification d'utilisateur"
+            "Utilisation de la méthode fetch avec les verbes GET, POST et DELETE",
+            "Gérer une authentification d'utilisateur via un token"
         ],
         "imageURL": "../../../public/assets/appliJavaScriptNatif.png",
         "gitHubLink": "https://github.com/Arnaud-Goguelin/OC_Projet3_Portfolio_Architecte",

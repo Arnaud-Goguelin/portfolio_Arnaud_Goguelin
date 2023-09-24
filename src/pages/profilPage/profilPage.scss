@@ -1,13 +1,13 @@
 @use '../../variables';
 
-.profilPage__displayZone {
+.profilPage {
     margin: auto 0 auto 80px;
     width: 70vw;
     height: 70vh;
     cursor: col-resize;
     overflow: hidden;
 
-    .profilPage__mobile {
+    &__mobile {
         margin: 80px 0 0 0;
         width: 200%;
         height: 100%;
@@ -19,12 +19,12 @@
         left: -50%;
     }
 
-    .profilPage__arrowContainer {
+    &__arrowContainer {
         margin: auto;
         width: 50%;
         height: 50px;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
         font-size: 1.2em;
 

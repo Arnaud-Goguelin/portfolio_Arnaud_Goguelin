@@ -1,66 +1,47 @@
-import { useContext } from 'react'
-import { useParams, Navigate } from 'react-router-dom';
+import { useParams, Navigate, Link } from 'react-router-dom';
+
+import projectsData from '../../data/projectsDatas.json'
+
 
 import './oneProjectPage.scss'
 
 function OneProjectPage() {
 
     const { id } = useParams()
-    console.log(id)
-    // const { data, isLoading, error } = useContext(DataHousing)
 
+    if (projectsData) {
+        const project = projectsData.find(project => project.id === id)
+        
+        if (project !== undefined) {
+            return (
+                <section className='oneProjectPage'>
 
-    // if (isLoading) {
-    //     return (
-    //         <span>Patientez, chargement des données</span>
-    //     )
-    // }
+                    <img className='oneProjectPage__projectImage' src={project.imageURL} alt="" />
 
-    // if (error) {
-    //     return <span>Il y a eu un problème: {error}</span>
-    // }
+                    <div className='oneProjectPage__description'>
+                        <h3>{project.title}</h3>
+                        <p className='staticContent'>Compétences acquises:</p>
+                        <ul>
+                            {project.skills.map(skill => (
+                                <li key={`${project.id} - skill n°${project.skills.indexOf(skill)}`}>{skill}</li>
+                            ))
+                            }
+                        </ul>
+                        <p className='staticContent'>Difficultées rencontrées:</p>
+                        <p>{project.difficulties}</p>
+                        <p className='staticContent'>Solutions apportées</p>
+                        <p>{project.solutions}</p>
+                        <Link to={project.gitHubLink} target='_blank'><img src="../../public/assets/github.png" alt="" /></Link>
+                        <Link to='' target='_blank'><img src="../../public/assets/link.png" alt="" /></Link>
+                    </div>
 
-    // if (data) {
-    //     const rental = data.find(rental => rental.id === id)
-
-    //     if (rental !== undefined) {
-
-    //         return (
-    //             <section key={`${rental.id}-Housing`}>
-    //                 <Carousel
-    //                     key={rental.pictures.indexOf()}
-    //                     pictures={rental.pictures}
-    //                 />
-    //                 <Introduction
-    //                     key={`${rental.id}-Introduction`}
-    //                     title={rental.title}
-    //                     location={rental.location}
-    //                     tags={rental.tags}
-    //                     host={rental.host}
-    //                     rating={rental.rating}
-    //                 />
-    //                 <div className='Housing__dropwdownContainer'>
-    //                     <div>
-    //                         <Dropdown
-    //                             key={`${id}-Description`}
-    //                             dropdownTitle={'Description'}
-    //                             dropdownContent={rental.description}
-    //                         />
-    //                     </div>
-    //                     <div>
-    //                         <Dropdown
-    //                             key={`${rental.id}-Equipements`}
-    //                             dropdownTitle={'Equipements'}
-    //                             dropdownContent={rental.equipments}
-    //                         />
-    //                     </div>
-    //                 </div>
-    //             </section>
-    //         )
-    //     } else {
-    //         return <Navigate to='/error' />
-    //     }
-    // }
+                    <Link to='/Projets' className='oneProjectPage__returnLink'><span className='arrow'></span>Retour à la Galerie</Link>
+                </section>
+            )
+        } else {
+            return <Navigate to='/error' />
+        }
+    }
 }
 
 export default OneProjectPage
