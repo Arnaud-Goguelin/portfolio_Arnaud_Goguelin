@@ -1,29 +1,37 @@
 @use '../../variables';
 
 .landingPage {
-    margin: auto 0 auto 80px;
+    margin: 80px 0 auto 80px;
     width: 70%;
     height: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: space-between;
+    align-items: center;
 
+
+    &__content {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
 
     h1 {
         width: 100%;
-        margin: 0 0 70px 0;
         font-weight: 1000;
         font-size: 5em;
+        font-family: variables.$second-font-family;
+
 
         span {
-            margin: 0 0 0 45%;
             color: variables.$third-color;
         }
     }
 
-    &__bienvenue {
-        margin: 0 0 70px 0;
+    .landingPage__bienvenue {
+        margin: 70px 0;
+        color: red;
         font-size: 3em;
         font-weight: 800;
         color: variables.$third-color;
@@ -31,7 +39,7 @@
 
     p {
         margin: 0px 0 50px 0;
-        font-size: 2.5em;
+        font-size: 2em;
         line-height: 1.5;
     }
 

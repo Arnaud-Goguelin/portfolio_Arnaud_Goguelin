@@ -6,6 +6,7 @@ import LandingPage from './pages/landingPage/landingPage'
 import ProfilPage from './pages/profilPage/profilPage'
 import ProjectsGalleryPage from './pages/projectsGalleryPage/projectsGalleryPage'
 import OneProjectPage from './pages/oneProjectPage/oneProjectPage'
+import ObjectivesPage from './pages/objectivesPage/objectivesPage'
 // import Footer from './components/footer/footer'
 import './main.scss'
 
@@ -20,7 +21,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             <Route path='/Profil' element={<ProfilPage />} />
             <Route path='/Projets' element={<ProjectsGalleryPage />} />
             <Route path='/Projets/:id' element={<OneProjectPage />} />
-            {/* <Route path='/Objectifs' element={<TODO />} /> */}
+            <Route path='/Objectifs' element={<ObjectivesPage />} />
             {/* <Route path='/Contact' element={<TODO />} /> */}
             {/* <Route path='/*' element={<TODO />} /> */}
           </Routes>

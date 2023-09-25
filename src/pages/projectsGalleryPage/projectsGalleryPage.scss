@@ -13,11 +13,11 @@
     h2 {
         position: absolute;
         top: -20px;
-        width: 80%;
         font-size: 3em;
         font-weight: 1000;
         font-variant-caps: small-caps;
         color: variables.$third-color;
+        font-family: variables.$second-font-family;
     }
 
     &__buttonsContainer {

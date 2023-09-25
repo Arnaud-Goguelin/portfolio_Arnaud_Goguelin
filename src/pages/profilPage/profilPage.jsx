@@ -49,21 +49,28 @@ function ProfilPage() {
             onKeyDown={ (event) => handleKeyDown(event)}
             tabIndex={0}
         >
+
             <div className='profilPage__arrowContainer'>
                 <div className='profilPage__arrow left'></div>
                 <p>Défilement aux mouvements de la souris ou au clavier</p>
                 <div className='profilPage__arrow right'></div>
             </div>
-            <div className='profilPage__mobile' ref={mobileContent}>
+            
+            <div 
+                className='profilPage__mobile' 
+                ref={mobileContent}
+            >
                 {profilDatas.map(data => (
                     <TextDisplay 
                         key={data.id}
+                        titleLevel={2}
                         title={data.title}
                         paragraphs={data.paragraphs}
-                        skills={data.skills}
+                        lists={data.skills}
                     />
                 ))}
             </div>
+
         </section>
     )
 }
