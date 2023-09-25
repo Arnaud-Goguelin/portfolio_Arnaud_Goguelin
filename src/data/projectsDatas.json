@@ -36,7 +36,7 @@
         "gitHubLink": "https://github.com/Arnaud-Goguelin/OC_Projet3_Portfolio_Architecte",
         "tags": [
             "Front-End",
-            "JavaScript"
+            "JavaScript vanilla"
         ]
     },
     {
@@ -77,7 +77,6 @@
         "tags": [
             "Front-End",
             "React",
-            "JavaScript",
             "Responsive",
             "Sass"
         ]
@@ -103,10 +102,7 @@
         "gitHubLink": "https://github.com/Arnaud-Goguelin/OC_Projet7_Backend_App_Notation_de_Livres",
         "tags": [
             "Back-end",
-            "Node.JS",
-            "Express",
-            "Mongoose",
-            "MongoDB"
+            "Node.JS"
         ]
     },
     {

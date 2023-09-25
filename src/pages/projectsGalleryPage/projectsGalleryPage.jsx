@@ -52,6 +52,7 @@ function ProjectsPage() {
             className='projectsPage'
             onWheel={(event) => handleWheel(event)}
         >
+            <h2>Gallerie de projets</h2>
             <div 
                 className='projectsPage__buttonsContainer'
                 ref={buttonsContainer}
