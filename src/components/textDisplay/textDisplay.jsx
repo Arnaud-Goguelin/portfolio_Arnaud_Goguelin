@@ -2,16 +2,19 @@ import PropTypes from 'prop-types'
 
 import './textDisplay.scss'
 
-function TextDisplay({ title, paragraphs, skills }) {
+function TextDisplay({ titleLevel, title, paragraphs, lists }) {
+
+    //Création d'un niveau de titre adaptable
+    const Title = `h${titleLevel}`;
 
     return(
         <div className='contentToDisplay'>
-            <h2>{title}</h2>
+            <Title>{title}</Title>
             {paragraphs.map((content, index) => (
                 <p key={index + 'paragraph'}>{content}</p>
             ))}
             <ul>
-                {skills.map((content, index) => (
+                {lists.map((content, index) => (
                 <li key={index + 'skill'}>{content}</li>
                 ))}
             </ul>
@@ -22,7 +25,8 @@ function TextDisplay({ title, paragraphs, skills }) {
 export default TextDisplay
 
 TextDisplay.propTypes  = {
+    titleLevel: PropTypes.number,
     title: PropTypes.string,
     paragraphs: PropTypes.array,
-    skills: PropTypes.array
+    lists: PropTypes.array
   }

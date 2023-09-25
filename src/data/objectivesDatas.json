@@ -1,0 +1,61 @@
+[
+    {
+        "id": "frontObjsCT",
+        "specialization": "front-end",
+        "title": "Dans l'année à venir",
+        "paragraphs": [],
+        "objectives": [
+            "Approfondir ma maîtrise de React,",
+            "Apprendre TypeScript,",
+            "Apprendre le builder Vite."
+        ]
+    },
+    {
+        "id": "frontObjsMT",
+        "specialization": "front-end",
+        "title": "Dans 1 à 2 ans",
+        "paragraphs": [],
+        "objectives": [
+            "Apprendre un nouveau framework de React: Next.JS."
+        ]
+    },
+    {
+        "id": "frontObjsLT",
+        "specialization": "front-end",
+        "title": "Dans 3 ans",
+        "paragraphs": [],
+        "objectives": [
+            "Apprendre un nouveau framework de JavaScript: Vue.JS ou Svelte.JS."
+        ]
+    },
+    {
+        "id": "backObjsCT",
+        "specialization": "back-end",
+        "title": "Dans l'année à venir",
+        "paragraphs": [],
+        "objectives": [
+            "Approfondir ma maîtrise de Node.JS, Express et Mongoose,",
+            "Apprendre TypeScript,",
+            "Apprendre l'ORM Prisma pour gérer les bases de données SQL,",
+            "En apprendre plus sur la sécurisation d'une application web."
+        ]
+    },
+    {
+        "id": "backObjsMT",
+        "specialization": "back-end",
+        "title": "Dans 1 à 2 ans",
+        "paragraphs": [],
+        "objectives": [
+            "Apprendre un nouveau frameword de NodeJS: NestJS ou Koa."
+        ]
+    },
+    {
+        "id": "backObjsLT",
+        "specialization": "back-end",
+        "title": "Dans 3 ans",
+        "paragraphs": [],
+        "objectives": [
+            "Apprendre un nouveau langage backend: Rust."
+        ]
+    }
+]
