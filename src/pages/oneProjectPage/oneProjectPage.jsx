@@ -39,7 +39,7 @@ function OneProjectPage() {
                 </section>
             )
         } else {
-            return <Navigate to='/error' />
+            return <Navigate to='/page non trouvée' />
         }
     }
 }

@@ -10,11 +10,7 @@ import ProjectCard from '../../components/projectCard/projectCard'
 function ProjectsPage() {
 
     const buttonsContainer = useRef(null)
-    const scrollBarToFill = useRef(null)
     const movingGallery = useRef(null)
-
-    //création d'un variable contenant les projets filtrés
-    const [ projectsFiltered, setProjectsFiltered ] = useState([])
 
     //Création d'un tableau de valeurs uniques pour générer les boutons filtres
     const unusableTags = projectsData.map((project) => project.tags);
@@ -23,6 +19,9 @@ function ProjectsPage() {
     })
     const tags = Array.from(new Set(tagsWithDuplicates))
     tags.unshift('Tous')
+
+    //Création d'un variable contenant les projets filtrés
+    const [ projectsFiltered, setProjectsFiltered ] = useState([])
 
     //Identification du filtre actif + filtrage des projets
     function filterProjects(event) {
@@ -35,16 +34,15 @@ function ProjectsPage() {
 
         //Filtre des projetcs en fonction de la valeur du bouton actif et mise à jour de la variable projectsFiltered 
         const filterValue = event.target.innerText
-        
         setProjectsFiltered(projectsData.filter(project => project.tags.includes(filterValue)))
     }
+
     //Gestion de l'évènement wheel
      function handleWheel(event) {
         // On récupère la valeur de scrollLeft de gallery 
         // (soit le nombre de pixels le long desquels le contenu d'un élément a défilé depuis son bord gauche)
         // et on y ajoute deltaY (la quantité de défilement vertical dans l'unité)
         // verticale car tous les utilisateurs ne disposent pas de souris avec molettes horizontales.
-
         const gallery = movingGallery.current;
         return gallery.scrollLeft += event.deltaY;
     }   
@@ -74,7 +72,7 @@ function ProjectsPage() {
                 className='projectsPage__gallery'
                 ref={movingGallery}
             >
-                {   //Condition d'affichge des projet: si le tableau des projets filtrés vide,
+                {   //Condition d'affichge des projet: si le tableau des projets filtrés est vide,
                     //càd au premier affichage sans aucun filtre actif, alors on utilise le tableau de données complet,
                     //sinon s'il est rempli, c'est qu'un filtre est actif, et on affiche les projets filtrés. 
                     projectsFiltered.length === 0 ?
