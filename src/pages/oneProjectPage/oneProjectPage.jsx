@@ -32,7 +32,7 @@ function OneProjectPage() {
                         <p className='staticContent'>Solutions apportées</p>
                         <p>{project.solutions}</p>
                         <Link to={project.gitHubLink} target='_blank'><img src="../../public/assets/github.png" alt="" /></Link>
-                        <Link to='' target='_blank'><img src="../../public/assets/link.png" alt="" /></Link>
+                        <Link to={project.deployedApp} target='_blank'><img src="../../public/assets/link.png" alt="" /></Link>
                     </div>
 
                     <Link to='/Projets' className='oneProjectPage__returnLink'><span className='arrow'></span>Retour à la Galerie</Link>
