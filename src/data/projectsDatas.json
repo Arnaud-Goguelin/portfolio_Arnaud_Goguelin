@@ -13,6 +13,7 @@
         ],
         "imageURL": "../../../public/assets/integrationResponsive.png",
         "gitHubLink": "https://github.com/Arnaud-Goguelin/OC_Projet2_Booki",
+        "deployedApp": "https://arnaud-goguelin.github.io/OC_Projet2_Booki/",
         "tags": [
             "Tous",
             "Front-End",
@@ -35,6 +36,7 @@
         ],
         "imageURL": "../../../public/assets/appliJavaScriptNatif.png",
         "gitHubLink": "https://github.com/Arnaud-Goguelin/OC_Projet3_Portfolio_Architecte",
+        "deployedApp": "https://p3portfolioarchideployed.pages.dev/",
         "tags": [
             "Tous",
             "Front-End",
@@ -55,6 +57,7 @@
         ],
         "imageURL": "../../../public/assets/optimisationDebug.png",
         "gitHubLink": "https://github.com/Arnaud-Goguelin/OC_Projet5_Debug_Optimisation_Portfolio_Photographe",
+        "deployedApp": "https://arnaud-goguelin.github.io/OC_Projet5_Debug_Optimisation_Portfolio_Photographe/",
         "tags": [
             "Tous",
             "Front-End",
@@ -77,6 +80,7 @@
         ],
         "imageURL": "../../../public/assets/appliReact.png",
         "gitHubLink": "https://github.com/Arnaud-Goguelin/OC_Projet6_React_App_Location_Immo",
+        "deployedApp": "https://p6appimmodeployed.pages.dev/",
         "tags": [
             "Tous",
             "Front-End",
@@ -105,6 +109,7 @@
         ],
         "imageURL": "../../../public/assets/backend.png",
         "gitHubLink": "https://github.com/Arnaud-Goguelin/OC_Projet7_Backend_App_Notation_de_Livres",
+        "deployedApp": "https://p7vieuxgrimoirefrontenddeployed.pages.dev/",
         "tags": [
             "Tous",
             "Back-end",

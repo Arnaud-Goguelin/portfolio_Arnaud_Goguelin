@@ -1,73 +1,43 @@
 [
     {
-        "id": "frontObjsCT",
-        "specialization": [
-            "Front-end"
-        ],
-        "title": "Dans l'année à venir",
-        "paragraphs": [],
-        "objectives": [
-            "Approfondir ma maîtrise de React,",
-            "Apprendre TypeScript,",
-            "Apprendre le builder Vite."
-        ]
+        "id": "ObjsCT",
+        "timeLimit": "Dans l'année à venir",
+        "objectives": {
+            "Front-end": [
+                "Approfondir ma maîtrise de React,",
+                "Apprendre TypeScript,",
+                "Apprendre le builder Vite."
+            ],
+            "Back-end": [
+                "Approfondir ma maîtrise de Node.JS, Express et Mongoose,",
+                "Apprendre TypeScript,",
+                "Apprendre l'ORM Prisma pour gérer les bases de données SQL,",
+                "En apprendre plus sur la sécurisation d'une application web."
+            ]
+        }
     },
     {
-        "id": "frontObjsMT",
-        "specialization": [
-            "Front-end"
-        ],
-        "title": "Dans 1 à 2 ans",
-        "paragraphs": [],
-        "objectives": [
-            "Apprendre un nouveau framework de React: Next.JS."
-        ]
+        "id": "ObjsMT",
+        "timeLimit": "Dans 1 à 2 ans",
+        "objectives": {
+            "Front-end": [
+                "Apprendre un nouveau framework de React: Next.JS."
+            ],
+            "Back-end": [
+                "Apprendre un nouveau frameword de NodeJS: NestJS ou Koa."
+            ]
+        }
     },
     {
-        "id": "frontObjsLT",
-        "specialization": [
-            "Front-end"
-        ],
-        "title": "Dans 3 ans",
-        "paragraphs": [],
-        "objectives": [
-            "Apprendre un nouveau framework de JavaScript: Vue.JS ou Svelte.JS."
-        ]
-    },
-    {
-        "id": "backObjsCT",
-        "specialization": [
-            "Back-end"
-        ],
-        "title": "Dans l'année à venir",
-        "paragraphs": [],
-        "objectives": [
-            "Approfondir ma maîtrise de Node.JS, Express et Mongoose,",
-            "Apprendre TypeScript,",
-            "Apprendre l'ORM Prisma pour gérer les bases de données SQL,",
-            "En apprendre plus sur la sécurisation d'une application web."
-        ]
-    },
-    {
-        "id": "backObjsMT",
-        "specialization": [
-            "Back-end"
-        ],
-        "title": "Dans 1 à 2 ans",
-        "paragraphs": [],
-        "objectives": [
-            "Apprendre un nouveau frameword de NodeJS: NestJS ou Koa."
-        ]
-    },
-    {
-        "id": "backObjsLT",
-        "specialization": [
-            "Back-end"
-        ],
-        "title": "Dans 3 ans",
-        "paragraphs": [],
-        "objectives": [
-            "Apprendre un nouveau langage backend: Rust."
-        ]
+        "id": "ObjsLT",
+        "timeLimit": "Dans 3 ans",
+        "objectives": {
+            "Front-end": [
+                "Apprendre un nouveau framework de JavaScript: Vue.JS ou Svelte.JS."
+            ],
+            "Back-end": [
+                "Apprendre un nouveau langage backend: Rust."
+            ]
+        }
     }
 ]
