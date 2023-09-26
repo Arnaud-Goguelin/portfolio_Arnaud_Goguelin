@@ -6,18 +6,14 @@ import projectsData from '../../data/projectsDatas.json'
 
 import FilterButton from '../../components/filterButton/filterButton'
 import ProjectCard from '../../components/projectCard/projectCard'
-import { filterThings } from '../../utils/filterFucttion/filterFunction'
+import { filterThings } from '../../utils/filter'
+import { extractDatas } from '../../utils/extractDatas'
 
 function ProjectsPage() {
 
     //Création d'un tableau de valeurs uniques pour générer les boutons filtres
-
-    const unusableTags = projectsData.map((project) => project.tags);
-    const tagsWithDuplicates = unusableTags.reduce((acc, tags) => {
-        return acc.concat(tags)
-    })
+    const tagsWithDuplicates = extractDatas(projectsData, 'tags')
     const tags = Array.from(new Set(tagsWithDuplicates))
-    tags.unshift('Tous')
 
     //Création des variables et ref nécessaires au filtre des projets
     const [ projectsFiltered, setProjectsFiltered ] = useState([])

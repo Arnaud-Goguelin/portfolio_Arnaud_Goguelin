@@ -14,6 +14,7 @@
         "imageURL": "../../../public/assets/integrationResponsive.png",
         "gitHubLink": "https://github.com/Arnaud-Goguelin/OC_Projet2_Booki",
         "tags": [
+            "Tous",
             "Front-End",
             "Responsive"
         ]
@@ -35,6 +36,7 @@
         "imageURL": "../../../public/assets/appliJavaScriptNatif.png",
         "gitHubLink": "https://github.com/Arnaud-Goguelin/OC_Projet3_Portfolio_Architecte",
         "tags": [
+            "Tous",
             "Front-End",
             "JavaScript vanilla"
         ]
@@ -54,6 +56,7 @@
         "imageURL": "../../../public/assets/optimisationDebug.png",
         "gitHubLink": "https://github.com/Arnaud-Goguelin/OC_Projet5_Debug_Optimisation_Portfolio_Photographe",
         "tags": [
+            "Tous",
             "Front-End",
             "SEO",
             "Accessibilité",
@@ -75,6 +78,7 @@
         "imageURL": "../../../public/assets/appliReact.png",
         "gitHubLink": "https://github.com/Arnaud-Goguelin/OC_Projet6_React_App_Location_Immo",
         "tags": [
+            "Tous",
             "Front-End",
             "React",
             "Accessibilité",
@@ -102,6 +106,7 @@
         "imageURL": "../../../public/assets/backend.png",
         "gitHubLink": "https://github.com/Arnaud-Goguelin/OC_Projet7_Backend_App_Notation_de_Livres",
         "tags": [
+            "Tous",
             "Back-end",
             "Node.JS"
         ]
@@ -119,6 +124,7 @@
         "imageURL": "string",
         "gitHubLink": "string",
         "tags": [
+            "Tous",
             "string",
             "string"
         ]
