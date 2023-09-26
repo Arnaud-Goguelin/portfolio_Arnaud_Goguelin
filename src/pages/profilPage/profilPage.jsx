@@ -1,5 +1,7 @@
 import { useRef, useState, useEffect } from 'react'
+
 import TextDisplay from '../../components/textDisplay/textDisplay'
+import ArrowContainer from '../../components/arrowContainer/arrowContainer'
 
 import profilDatas from '../../data/profilDatas.json'
 import './profilPage.scss'
@@ -50,11 +52,9 @@ function ProfilPage() {
             tabIndex={0}
         >
 
-            <div className='profilPage__arrowContainer'>
-                <div className='profilPage__arrow left'></div>
-                <p>Défilement aux mouvements de la souris ou au clavier</p>
-                <div className='profilPage__arrow right'></div>
-            </div>
+        <ArrowContainer
+            text='Défilement aux mouvements de la souris ou au clavier'
+        />
             
             <div 
                 className='profilPage__mobile' 

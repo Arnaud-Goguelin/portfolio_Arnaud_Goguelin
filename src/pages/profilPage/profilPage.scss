@@ -26,37 +26,21 @@
             color: variables.$third-color
         }
 
+        ul {
+            margin: 70px 0 30px 0;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            overflow: visible;
+            transition: none;
+        }
+
         li {
             padding: 10px 20px;
             border-radius: 20px;
             font-weight: 700;
             background-color: variables.$third-color;
             color: variables.$second-color;
-        }
-    }
-
-    &__arrowContainer {
-        margin: auto;
-        width: 50%;
-        height: 50px;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        font-size: 1.2em;
-
-        .profilPage__arrow {
-            width: 20px;
-            height: 20px;
-            border-top: 4px solid black;
-            border-right: 4px solid black;
-
-            &.right {
-                rotate: 45deg;
-            }
-
-            &.left {
-                rotate: 225deg
-            }
         }
     }
 }

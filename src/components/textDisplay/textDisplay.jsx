@@ -1,32 +1,47 @@
+import { useRef, useState, useEffect } from 'react'
+
 import PropTypes from 'prop-types'
 
 import './textDisplay.scss'
 
-function TextDisplay({ titleLevel, title, paragraphs, lists, listRef, handleClick, customHeight }) {
+function TextDisplay({ titleLevel, title, paragraphs, lists }) {
 
     //Création d'un niveau de titre adaptable
     const Title = `h${titleLevel}`;
 
+    const listsRef = useRef(null)
+    const [ customHeight, setCustonHeight ] = useState(0)
+
+    useEffect(() => {
+        if (listsRef.current) {
+            setCustonHeight(listsRef.current.scrollHeight);
+        }
+    }, [lists]);
+
     return(
         <div 
             className='contentToDisplay'
-            onClick= {handleClick}
         >
             <Title>{title}</Title>
-            {paragraphs.map((content, index) => (
-                <p key={index + 'paragraph'}>{content}</p>
+
+            {!paragraphs ? null
+            :
+            paragraphs.map((content, index) => (
+                <p key={'paragraph n°' + index}>{content}</p>
             ))}
-            <div 
-                ref={listRef}
+
+                <ul 
+                ref={listsRef}
                 style={{ height: customHeight }}
-                className='contentToDisplay__dropdown'
-            >
-                <ul>
-                    {lists.map((content, index) => (
-                    <li key={index + 'skill'}>{content}</li>
-                    ))}
+                >
+                    {!lists ? null
+                    :
+                    lists.map((content, index) => (
+                    <li key={'skill n°' + index}>{content}</li>
+                    ))
+                    }
                 </ul>
-            </div>
+
         </div>
     )
 }
@@ -38,7 +53,4 @@ TextDisplay.propTypes  = {
     title: PropTypes.string,
     paragraphs: PropTypes.array,
     lists: PropTypes.array,
-    listRefs: PropTypes.object,
-    handleClick: PropTypes.func,
-    customHeight: PropTypes.number
   }

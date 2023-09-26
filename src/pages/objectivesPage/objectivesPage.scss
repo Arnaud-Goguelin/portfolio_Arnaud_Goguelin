@@ -11,11 +11,70 @@
 
     h2 {
         font-size: 3em;
-        font-weight: 1000;
         font-variant-caps: small-caps;
         color: variables.$third-color;
         font-family: variables.$second-font-family;
-        margin: 80px 0 50px 0;
+        margin: 80px 0 0 0;
+    }
+
+    .arrowContainer {
+        position: relative;
+        margin: 0 auto;
+        bottom: -50px;
+        font-size: 1.5em;
+        width: 30%;
+    }
+
+    &__buttonsContainer {
+        margin: 50px auto;
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+
+
+        button {
+            font-size: 2em;
+            font-family: variables.$second-font-family;
+            color: variables.$second-color;
+            background-color: variables.$third-color;
+            padding: 5px 30px;
+        }
+    }
+
+    &__content {
+        width: 100%;
+        margin: 0 auto;
+
+        h4 {
+            margin: 50px auto 0 auto;
+            width: 40%;
+            padding: 10px 25px;
+            background-color: variables.$fourth-color;
+            border-radius: 10px 10px 0 0;
+            color: variables.$second-color;
+            font-size: 2em;
+            font-weight: 700;
+        }
+
+        ul {
+            width: 40%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+
+            background-color: variables.$second-color;
+            padding: 0 25px;
+            border-radius: 0 0 10px 10px;
+
+            position: relative;
+
+            li {
+                margin: 10px 0;
+            }
+        }
     }
 
 
