@@ -1,7 +1,7 @@
 [
     {
         "id": "frontObjsCT",
-        "specialization": "front-end",
+        "specialization": "Front-end",
         "title": "Dans l'année à venir",
         "paragraphs": [],
         "objectives": [
@@ -12,7 +12,7 @@
     },
     {
         "id": "frontObjsMT",
-        "specialization": "front-end",
+        "specialization": "Front-end",
         "title": "Dans 1 à 2 ans",
         "paragraphs": [],
         "objectives": [
@@ -21,7 +21,7 @@
     },
     {
         "id": "frontObjsLT",
-        "specialization": "front-end",
+        "specialization": "Front-end",
         "title": "Dans 3 ans",
         "paragraphs": [],
         "objectives": [
@@ -30,7 +30,7 @@
     },
     {
         "id": "backObjsCT",
-        "specialization": "back-end",
+        "specialization": "Back-end",
         "title": "Dans l'année à venir",
         "paragraphs": [],
         "objectives": [
@@ -42,7 +42,7 @@
     },
     {
         "id": "backObjsMT",
-        "specialization": "back-end",
+        "specialization": "Back-end",
         "title": "Dans 1 à 2 ans",
         "paragraphs": [],
         "objectives": [
@@ -51,7 +51,7 @@
     },
     {
         "id": "backObjsLT",
-        "specialization": "back-end",
+        "specialization": "Back-end",
         "title": "Dans 3 ans",
         "paragraphs": [],
         "objectives": [

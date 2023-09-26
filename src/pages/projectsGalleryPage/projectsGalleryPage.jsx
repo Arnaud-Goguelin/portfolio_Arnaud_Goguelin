@@ -6,13 +6,12 @@ import projectsData from '../../data/projectsDatas.json'
 
 import FilterButton from '../../components/filterButton/filterButton'
 import ProjectCard from '../../components/projectCard/projectCard'
+import { filterThings } from '../../utils/filterFucttion/filterFunction'
 
 function ProjectsPage() {
 
-    const buttonsContainer = useRef(null)
-    const movingGallery = useRef(null)
-
     //Création d'un tableau de valeurs uniques pour générer les boutons filtres
+
     const unusableTags = projectsData.map((project) => project.tags);
     const tagsWithDuplicates = unusableTags.reduce((acc, tags) => {
         return acc.concat(tags)
@@ -20,25 +19,14 @@ function ProjectsPage() {
     const tags = Array.from(new Set(tagsWithDuplicates))
     tags.unshift('Tous')
 
-    //Création d'un variable contenant les projets filtrés
+    //Création des variables et ref nécessaires au filtre des projets
     const [ projectsFiltered, setProjectsFiltered ] = useState([])
-
-    //Identification du filtre actif + filtrage des projets
-    function filterProjects(event) {
-        //Ajout et suppression de classes CSS pour identifier le filtre actif
-        const allButtonsFilter = Array.from(buttonsContainer.current.children)
-        allButtonsFilter.forEach(buttonFilter => buttonFilter.classList.remove('active'))
-
-        const selectedButton = event.target
-        selectedButton.classList.add('active')
-
-        //Filtre des projetcs en fonction de la valeur du bouton actif et mise à jour de la variable projectsFiltered 
-        const filterValue = event.target.innerText
-        setProjectsFiltered(projectsData.filter(project => project.tags.includes(filterValue)))
-    }
+    const buttonsContainer = useRef(null)
 
     //Gestion de l'évènement wheel
-     function handleWheel(event) {
+
+    const movingGallery = useRef(null)
+    function handleWheel(event) {
         // On récupère la valeur de scrollLeft de gallery 
         // (soit le nombre de pixels le long desquels le contenu d'un élément a défilé depuis son bord gauche)
         // et on y ajoute deltaY (la quantité de défilement vertical dans l'unité)
@@ -63,7 +51,7 @@ function ProjectsPage() {
                     key={'filter n°' + tags.indexOf(tag)}
                     className='projectsPage__filter'
                     content={tag}
-                    onClick={filterProjects}
+                    onClick={event => filterThings(event, buttonsContainer, projectsData, setProjectsFiltered, 'tags')}
                 />
             ))
             }
