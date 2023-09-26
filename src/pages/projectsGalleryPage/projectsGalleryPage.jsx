@@ -6,12 +6,15 @@ import projectsData from '../../data/projectsDatas.json'
 
 import FilterButton from '../../components/filterButton/filterButton'
 import ProjectCard from '../../components/projectCard/projectCard'
-import { filterThings } from '../../utils/filter'
+import { handleActiveClass } from '../../utils/handleActiveClass'
 import { extractDatas } from '../../utils/extractDatas'
 
 function ProjectsPage() {
 
-    //Création d'un tableau de valeurs uniques pour générer les boutons filtres
+    //Création d'un tableau de valeurs uniques (sans doublon) pour générer les boutons filtres
+    // En effet nos tags de la base de données sont des tableaux de strings.
+    // La fonction extractDatas récupère dans un tableau la totalité des tableaux "tags",
+    // puis les concatène pour n'obtenir qu'un seul tableau avec toutes les strings, mais en double.
     const tagsWithDuplicates = extractDatas(projectsData, 'tags')
     const tags = Array.from(new Set(tagsWithDuplicates))
 
@@ -29,7 +32,16 @@ function ProjectsPage() {
         // verticale car tous les utilisateurs ne disposent pas de souris avec molettes horizontales.
         const gallery = movingGallery.current;
         return gallery.scrollLeft += event.deltaY;
-    }   
+    }
+    
+    
+    //Filtre des projetcs en fonction de la valeur du bouton actif et mise à jour de la variable projectsFiltered 
+    function filterProjects(event) {
+        const filterValue = event.target.textContent
+        setProjectsFiltered(projectsData.filter(project => project.tags.includes(filterValue)))
+    }
+    
+
 
     return (
         <section 
@@ -47,7 +59,7 @@ function ProjectsPage() {
                     key={'filter n°' + tags.indexOf(tag)}
                     className='projectsPage__filter'
                     content={tag}
-                    onClick={event => filterThings(event, buttonsContainer, projectsData, setProjectsFiltered, 'tags')}
+                    onClick={event => {handleActiveClass(event, buttonsContainer);filterProjects(event)}}
                 />
             ))
             }

@@ -6,8 +6,12 @@
     aspect-ratio: 1;
     border-radius: 10px;
     border: 1px solid rgba(0, 0, 0, 0.7);
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.3), transparent 30%);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent 30%);
     position: relative;
+
+    &:hover {
+        background: none;
+    }
 
     // @media (max-width: calc(variables.$extraLarge-screen - 1px)) {
     //     margin: 20px;
@@ -40,10 +44,11 @@
     }
 
     .card__text {
-        width: 60%;
+        width: 100%;
         position: absolute;
         left: 20px;
         bottom: 10px;
         color: variables.$second-color;
+        font-size: 1.5em;
     }
 }
