@@ -4,14 +4,19 @@ import objectivesDatas from '../../data/objectivesDatas.json'
 
 import TextDisplay from '../../components/textDisplay/textDisplay'
 import FilterButton from '../../components/filterButton/filterButton'
-import { filterThings } from '../../utils/filterFucttion/filterFunction'
+import { filterThings } from '../../utils/filter'
+import { extractDatas } from '../../utils/extractDatas'
 
 import './objectivesPage.scss'
 
 
 function ObjectivesPage() {
 
-    const specializations = [ 'Front-end', 'Back-end']
+    // Création d'un tableau de valeur pour générer les boutons filtres.
+    const specializationsWithDuplicates = extractDatas(objectivesDatas, 'specialization')
+    const specializations = Array.from(new Set(specializationsWithDuplicates))
+
+    // Création des ref et variables nécessaires aux filtres
     const buttonsContainer = useRef(null)
     const [ objectivesFiltered, setObjectivesFiltered ] = useState([])  
 
@@ -22,7 +27,7 @@ function ObjectivesPage() {
             <h2>{'Objectifs d\'apprentissage'}</h2>
 
             <div 
-                className='objectivesPage__buttonContainer'
+                className='objectivesPage__buttonsContainer'
                 ref={buttonsContainer}
             >
                 {
@@ -55,44 +60,6 @@ function ObjectivesPage() {
                     ))
                 }
             </div>
-
-             {/* <div className='objectivesPage__specializationContent'>
-                <h3>Back-End</h3>
-                {
-                    backEndObjectives.map(data => (
-                        <TextDisplay
-                            key={data.id}
-                            titleLevel={4}
-                            title={data.title}
-                            paragraphs={data.paragraphs}
-                            lists={data.objectives} 
-                            listRef={(element) => (listRef.current[data.id] = element)}
-                            handleClick={handleClick}
-                            customHeight={customHeight}
-                        />
-                    ))
-                }
-            </div> */}
-
-            {/* <div className='objectivesPage__specializationContent'>
-                <h3>Front-End</h3>
-                {
-                    frontEndObjectives.map(data => (
-                        <TextDisplay
-                            key={data.id}
-                            titleLevel={4}
-                            title={data.title}
-                            paragraphs={data.paragraphs}
-                            lists={data.objectives}
-                            listRef={listRef}
-                            handleClick={() => (setIsOpen(!isOpen))}
-                            customHeight={customHeight} 
-                        />
-                    ))
-                }
-            </div> */}
-
-            
 
         </section>
     )
