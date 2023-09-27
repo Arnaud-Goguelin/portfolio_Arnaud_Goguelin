@@ -1,0 +1,47 @@
+@use '../../variables';
+
+.goo_box {
+    filter: url(./gooFilter.svg#goo);
+    position: relative;
+    padding: 1em 1em 2em;
+    text-align: center;
+    cursor: pointer;
+    width: 30%;
+}
+
+.goo_item {
+    background: variables.$third-color;
+    color: variables.$second-color;
+    border-radius: 50%;
+    color: variables.$second-color;
+    font-size: 2em;
+    font-weight: 700;
+    aspect-ratio: 1;
+    height: 100px;
+    line-height: 100px;
+    margin: -100px 0 0 0;
+    position: relative;
+    transition: all 0.5s ease;
+    z-index: 0;
+}
+
+.goo-click {
+    margin-top: 0;
+    z-index: 1;
+}
+
+.inner {
+    transition: all 0.27s 0.05s;
+}
+
+/* OPENED */
+.goo_box.active {
+    .goo-click, .goo-02 {
+        background: variables.$second-color;
+        color: variables.$fourth-color;
+    }
+}
+
+.goo_box.active .goo_item {
+    margin: 10px 0 0 0;
+}

@@ -3,7 +3,7 @@ import { useRef, useState } from 'react'
 import objectivesDatas from '../../data/objectivesDatas.json'
 
 import TextDisplay from '../../components/textDisplay/textDisplay'
-import FilterButton from '../../components/filterButton/filterButton'
+import ComponentButton from '../../components/componentButton/componentButton'
 import ArrowContainer from '../../components/arrowContainer/arrowContainer'
 
 import { handleActiveClass } from '../../utils/handleActiveClass'
@@ -51,7 +51,7 @@ function ObjectivesPage() {
             >
                 {
                     arrayForFilters.map(specialization => (
-                        <FilterButton 
+                        <ComponentButton 
                             key={arrayForFilters.indexOf(specialization)}
                             content={specialization}
                             onClick={(event) => {

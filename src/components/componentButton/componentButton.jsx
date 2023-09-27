@@ -1,12 +1,11 @@
 import PropTypes from 'prop-types'
 
-import './filterButton.scss'
+import './componentButton.scss'
 
-function FilterButton ({content, onClick}) {
+function ComponentButton ({content, onClick}) {
 
     return (
         <button 
-            className='filterButton'
             onClick={onClick}
         >
             {content}
@@ -14,9 +13,9 @@ function FilterButton ({content, onClick}) {
     )
 }
 
-export default FilterButton
+export default ComponentButton
 
-FilterButton.propTypes  = {
+ComponentButton.propTypes  = {
     content: PropTypes.string,
     onClick: PropTypes.func
 }

@@ -4,7 +4,7 @@ import './projectsGalleryPage.scss'
 
 import projectsData from '../../data/projectsDatas.json'
 
-import FilterButton from '../../components/filterButton/filterButton'
+import ComponentButton from '../../components/componentButton/componentButton'
 import ProjectCard from '../../components/projectCard/projectCard'
 import { handleActiveClass } from '../../utils/handleActiveClass'
 import { extractDatas } from '../../utils/extractDatas'
@@ -55,7 +55,7 @@ function ProjectsPage() {
             >
             {
             tags.map(tag => (
-                <FilterButton 
+                <ComponentButton 
                     key={'filter n°' + tags.indexOf(tag)}
                     className='projectsPage__filter'
                     content={tag}

@@ -1,0 +1,10 @@
+@use '../../variables';
+
+.contactPage {
+    width: 50vw;
+    height: 50vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid black;
+}
