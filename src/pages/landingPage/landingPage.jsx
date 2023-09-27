@@ -6,7 +6,7 @@ function LandingPage() {
         <section className='landingPage'>
 
             <div className='landingPage__gooTitle'>
-                <h1><span>A</span>RNAUD <span>G</span>OGUELIN <br /><span><span>D</span>EVELOPPEUR <span>W</span>EB</span></h1>
+                <h1>ARNAUD GOGUELIN <br/><span>DEVELOPPEUR WEB</span></h1>
             </div>    
             
             <div className='landingPage__content'>

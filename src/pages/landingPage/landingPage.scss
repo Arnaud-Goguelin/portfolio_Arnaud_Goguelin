@@ -1,46 +1,38 @@
 @use '../../variables';
 
 @keyframes moveFont {
-    from {
-        /*Letter-spacing = Letter Movement*/
-        // letter-spacing: -10px;
-        /*Filters = Goo Spread Effect*/
+    0% {
+        letter-spacing: -10px;
         filter: blur(20px) contrast(30);
     }
 
-    to {
-        // letter-spacing: 3px;
+    100% {
+        letter-spacing: initial;
+        background: rgba(255, 255, 255, 1);
         filter: blur(0px) contrast(1);
     }
 }
 
-// @keyframes demonstration {
-//     from {
-//         letter-spacing: -10px;
-//         -webkit-filter: blur(20px) contrast(30);
-//         filter: blur(20px) contrast(30);
-//     }
-
-//     to {
-//         letter-spacing: initial;
-//         background: white;
-//         -webkit-filter: blur(0px) contrast(1);
-//         filter: blur(0px) contrast(1);
-//     }
-// }
-
 
 .landingPage {
-    margin: auto;
+    position: relative;
+    top: -50px;
     width: 70vw;
-    height: 100%;
+    height: 70vh;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    ;
 
     &__gooTitle {
+        padding: 50px;
         margin: 0 50px 0 0;
-        animation: moveFont 1.5s forwards;
+        box-shadow: 5px 5px 10px 5px #FFFF;
+        border-radius: 25px;
+        width: 100%;
+
+        animation: moveFont 5s forwards;
         filter: url(./gooFilter.svg#goo);
 
         h1 {
@@ -51,8 +43,8 @@
             letter-spacing: 0px;
             animation: all ease-in-out 2s;
 
-            h1:nth-child(0n+3) {
-                color: variables.$third-color;
+            span {
+                margin: 0 0 0 49.6%;
             }
         }
     }
@@ -60,27 +52,47 @@
     &__content {
         margin: 0 0 0 100px;
 
-        .landingPage__bienvenue {
-            margin: 70px 0;
-            color: red;
-            font-size: 3em;
-            font-weight: 800;
-            color: variables.$third-color;
-        }
-
         p {
             margin: 0px 0 50px 0;
             font-size: 2em;
             line-height: 1.5;
         }
 
-        p strong {
+        strong {
+            position: relative;
+            z-index: 2;
             color: variables.$third-color;
             font-weight: 800;
             transition: color 0.3s ease-in-out;
+
+            &:hover {
+                color: variables.$second-color;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                z-index: -1;
+                bottom: 0;
+                left: 0;
+                width: 0;
+                height: 1.5em;
+                background-color: variables.$third-color;
+                opacity: 0.3;
+                transition: width 0.3s ease;
+            }
+
+            &:hover::after {
+                width: 105%;
+            }
         }
     }
 
-
+    .landingPage__bienvenue {
+        margin: 70px 0;
+        font-size: 3em;
+        font-weight: 800;
+        color: variables.$third-color;
+    }
 
 }
