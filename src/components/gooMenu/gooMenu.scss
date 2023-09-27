@@ -2,11 +2,8 @@
 
 .goo_box {
     filter: url(./gooFilter.svg#goo);
-    position: relative;
-    padding: 1em 1em 2em;
     text-align: center;
     cursor: pointer;
-    width: 30%;
 }
 
 .goo_item {
@@ -30,8 +27,24 @@
     z-index: 1;
 }
 
+.goo_item:hover {
+    transform: scale(1.1);
+}
+
+.goo-click:hover {
+    background: variables.$second-color;
+    color: variables.$fourth-color;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
 .inner {
     transition: all 0.27s 0.05s;
+
+    img {
+        margin: 25px 0 0 0;
+        height: 45px;
+        aspect-ratio: 1;
+    }
 }
 
 /* OPENED */
@@ -39,6 +52,10 @@
     .goo-click, .goo-02 {
         background: variables.$second-color;
         color: variables.$fourth-color;
+    }
+
+    .goo-click {
+        border: 1px solid rgba(0, 0, 0, 0.5);
     }
 }
 

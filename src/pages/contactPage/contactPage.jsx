@@ -7,8 +7,23 @@ function ContactPage() {
 
     return (
         <div className='contactPage'>
-            <GooMenu />
-            <Form />
+
+            <h2>Contact</h2>
+
+            <div className='contactPage__content'>
+
+                <div className='contactPage__content__menu'>
+                    <h3>Réseaux Sociaux</h3>
+                    <GooMenu />
+                </div>
+
+                <div className='contactPage__content__form'>
+                    <h3>Ecrivez-moi</h3>
+                    <Form />
+                </div>
+                
+            </div>
+
         </div>
     )
 }

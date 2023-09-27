@@ -1,6 +1,12 @@
 import { useRef } from 'react'
+import { Link } from 'react-router-dom'
 
 import './gooMenu.scss'
+import menu from '../../../public/assets/menu.png'
+import gitHubLogo from '../../../public/assets/github.png'
+import linkedInLogo from '../../../public/assets/linkedin.png'
+import {linkToLinkedIn , linkToGitHub} from '../../utils/constants'
+
 
 function GooMenu() {
 
@@ -17,16 +23,21 @@ function GooMenu() {
 
     return (
 
-            <div className="goo_box" ref={gooBox} onClick={(event) => handleClick(event)}>
+            <div className="goo_box" ref={gooBox}>
                 
-                <div className="goo_item goo-click">
-                    <div className="inner">+</div>
+                <div 
+                    className="goo_item goo-click"
+                    onClick={(event) => handleClick(event)}
+                >
+                    <div className="inner">
+                    <img src={menu} alt='' />
+                </div>
                 </div>
                 <div className="goo_item goo-01">
-                    <div className="inner">1</div>
+                    <Link className='inner' to={linkToGitHub} target='_blank'><img src={gitHubLogo} alt="" /></Link>
                 </div>
                 <div className="goo_item goo-02">
-                    <div className="inner">2</div>
+                    <Link className='inner' to={linkToLinkedIn} target='_blank'><img src={linkedInLogo} alt="" /></Link>
                 </div>
 
             </div>
