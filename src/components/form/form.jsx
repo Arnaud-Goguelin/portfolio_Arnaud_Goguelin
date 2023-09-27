@@ -1,46 +1,38 @@
 import './form.scss'
 
+import { useRef, useState } from 'react'
+
+import { apiRoutes } from '../../utils/constants';
+
 import ComponentButton from '../componentButton/componentButton'
 
 function Form() {
 
-    // async function sendNewWork() {
+    const form = useRef(null)
+    const okMessage = useRef(null)
+    const errorMessage = useRef(null)
+    const [errorToDisplay, setErrorToDisplay] = useState('error')
 
-    //     //Création du body de la requête fetch sour la forme d'un objet FormData
-    //     const newWorkForm = document.querySelector("#form__newWork");
-    //     const newWorkBody = new FormData(newWorkForm);
-    
-    //     //Envoie du nouveau work
-    //     const answerAPIPostNewWork = await fetch ("http://localhost:5678/api/works", {
-    //         method: "POST",
-    //         headers: {
-    //             "Authorization" : `Bearer ${token}`,
-    //         },
-    //         body: newWorkBody,
-    //     });
-        
-    //     //Si la réponse est ok, insertion du nouveau work dans le tableau et MAJ de l'affichage
-    //     if (answerAPIPostNewWork.ok) {
-    //         /*A ce stade la réponse est à parser en objet JS au format JSON. Elle deviendra alors une promesse.
-    //         *Il faut attendre qu'elle soit résolue avant de l'utiliser comme objet à ajouter à notre tableau "works",
-    //         * d'où l'utilisation de la méthode .then.
-    //         */
-    //         answerAPIPostNewWork.json().then(newWork  => {
-    //         works.push(newWork);
-    //         createWorks(works);
-    //         closeAddWorkModal();
-    //         });
-    //     };
-    // };
+    async function postMessage() {
+        try {
+            const newMessage = new FormData(form.current);
+            const answerAPIPostMessage = await fetch (apiRoutes.postMessage, {
+                method: 'POST',
+                body: newMessage,
+            });
+            
+            if (answerAPIPostMessage.ok) {
+                okMessage.current.style.display = ''
+            }
+        } catch (error) {
+            setErrorToDisplay({error})
+            okMessage.current.style.display = ''
+        }
 
-
-
-    function handleClick() {
-        console.log('test')
     }
 
     return(
-        <form action="">
+        <form ref={form}>
             
             <div className='AllInputsNameContainer'>
                 <div className='oneInputNameContainer'>
@@ -61,8 +53,10 @@ function Form() {
 
             <ComponentButton 
                 content={'Envoyer'}
-                onClick={handleClick}
+                onClick={postMessage}
             />
+            <p className='confirmationMessage' ref={okMessage}>Message Envoyé!</p>
+            <p className='errorMessage' ref={errorMessage}> Une erreure est survenue : {errorToDisplay} </p>
         </form>
     )
 }

@@ -1,0 +1,45 @@
+@use '../../variables';
+
+.errorPage {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: variables.$third-color;
+
+    > :first-child {
+        font-size: 18em;
+        font-weight: 700;
+
+        // @media (max-width: variables.$medium-screen) {
+        //     font-size: 10em;
+        // }
+
+        // @media (max-width: variables.$small-screen) {
+        //         font-size: 6em;
+        //     }
+    }
+
+    > :nth-child(2n+0) {
+        font-size: 2em;
+        font-weight: 500;
+
+        // @media (max-width: variables.$medium-screen) {
+        //     width: 70%;
+        //     text-align: center;
+        //     font-size: 1.5em;
+        // }
+
+        // @media (max-width: variables.$small-screen) {
+        //     font-size: 1em;
+        // }
+    }
+
+    >a, a:visited {
+        font-size: 1em;
+        text-decoration: none;
+        text-decoration-line: underline;
+        color: variables.$third-color;
+    }
+}

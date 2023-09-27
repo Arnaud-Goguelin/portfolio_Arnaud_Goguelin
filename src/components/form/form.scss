@@ -37,8 +37,10 @@ form {
         border: none;
         border-radius: 10px;
         margin: 10px 0 20px 0;
-
         padding: 10px;
+
+        font-size: 1.5em;
+        font-family: variables.$first-font-family;
 
         &::placeholder {
             font-size: 1em;
@@ -61,5 +63,11 @@ form {
     textarea {
         height: 40%;
         width: 100%;
+    }
+
+    .confirmationMessage, .errorMessage {
+        display: none;
+        font-size: 1.5em;
+        font-weight: 700;
     }
 }

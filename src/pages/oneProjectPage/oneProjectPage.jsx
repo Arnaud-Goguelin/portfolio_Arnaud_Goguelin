@@ -1,6 +1,9 @@
 import { useParams, Navigate, Link } from 'react-router-dom';
 
 import projectsData from '../../data/projectsDatas.json'
+import gitHubLogo from '../../../public/assets/github.png'
+import linkImage from '../../../public/assets/link.png'
+
 
 
 import './oneProjectPage.scss'
@@ -31,8 +34,8 @@ function OneProjectPage() {
                         <p>{project.difficulties}</p>
                         <p className='staticContent'>Solutions apportées</p>
                         <p>{project.solutions}</p>
-                        <Link to={project.gitHubLink} target='_blank'><img src="../../public/assets/github.png" alt="" /></Link>
-                        <Link to={project.deployedApp} target='_blank'><img src="../../public/assets/link.png" alt="" /></Link>
+                        <Link to={project.gitHubLink} target='_blank'><img src={gitHubLogo} alt="" /></Link>
+                        <Link to={project.deployedApp} target='_blank'><img src={linkImage} alt="" /></Link>
                     </div>
 
                     <Link to='/Projets' className='oneProjectPage__returnLink'><span className='arrow'></span>Retour à la Galerie</Link>
