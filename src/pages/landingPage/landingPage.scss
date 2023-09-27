@@ -39,7 +39,7 @@
         h1 {
             width: 100%;
             font-weight: 1000;
-            font-size: 3em;
+            font-size: 2.5em;
             font-family: variables.$second-font-family;
             letter-spacing: 0px;
             animation: all ease-in-out 2s;
@@ -55,7 +55,7 @@
 
         p {
             margin: 0 0 20px 0;
-            font-size: 2em;
+            font-size: 1.5em;
             line-height: 1.5;
         }
 
@@ -77,21 +77,21 @@
                 bottom: 0;
                 left: 0;
                 width: 0;
-                height: 1.5em;
+                height: 1.3em;
                 background-color: variables.$third-color;
                 opacity: 0.3;
                 transition: width 0.3s ease;
             }
 
             &:hover::after {
-                width: 105%;
+                width: 101%;
             }
         }
     }
 
     .landingPage__bienvenue {
         margin: 30px 0;
-        font-size: 3em;
+        font-size: 2em;
         font-weight: 800;
         color: variables.$third-color;
     }

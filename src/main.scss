@@ -72,7 +72,7 @@ table {
 
 .globalStyle {
   font-family: variables.$first-font-family;
-  font-weight: 500;
+  font-weight: 300;
   font-size: 1em;
 
   @media (max-width: calc(variables.$extraLarge-screen - 1px)) {

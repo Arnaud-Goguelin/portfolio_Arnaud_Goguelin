@@ -76,3 +76,5 @@ function ProfilPage() {
 }
 
 export default ProfilPage
+
+// Ce composant React génère deux TextDisplay. Je souhaite apporter des modifications SCSS au premier composant seulement, et ce directement dans le code SCSS.
