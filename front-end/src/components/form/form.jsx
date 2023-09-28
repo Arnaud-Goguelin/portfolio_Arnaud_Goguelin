@@ -70,7 +70,7 @@ function Form() {
                 id='email' 
                 type='email' 
                 name='email'
-                placeholder={'exemple@webservice.com'} 
+                placeholder={'leBagage@universiteDeLInvisible.dw'} 
                 required 
             />
 
