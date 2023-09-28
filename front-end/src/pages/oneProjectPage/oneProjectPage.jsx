@@ -1,8 +1,8 @@
 import { useParams, Navigate, Link } from 'react-router-dom';
 
 import projectsData from '../../data/projectsDatas.json'
-import gitHubLogo from '../../../public/assets/github.png'
-import linkImage from '../../../public/assets/link.png'
+import gitHubLogo from '../../assets/github.png'
+import linkImage from '../../assets/link.png'
 
 
 

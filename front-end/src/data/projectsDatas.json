@@ -11,7 +11,7 @@
             "Maîtrise de HTML et CSS",
             "Connaissances de bases de GitHub"
         ],
-        "imageURL": "../../../public/assets/integrationResponsive.png",
+        "imageURL": "../src/assets/integrationResponsive.png",
         "gitHubLink": "https://github.com/Arnaud-Goguelin/OC_Projet2_Booki",
         "deployedApp": "https://arnaud-goguelin.github.io/OC_Projet2_Booki/",
         "tags": [
@@ -34,7 +34,7 @@
             "Utilisation de la méthode fetch avec les verbes GET, POST et DELETE",
             "Gérer une authentification d'utilisateur via un token"
         ],
-        "imageURL": "../../../public/assets/appliJavaScriptNatif.png",
+        "imageURL": "../src//assets/appliJavaScriptNatif.png",
         "gitHubLink": "https://github.com/Arnaud-Goguelin/OC_Projet3_Portfolio_Architecte",
         "deployedApp": "https://p3portfolioarchideployed.pages.dev/",
         "tags": [
@@ -55,7 +55,7 @@
             "Accessibilité d'une application web (sémantique HTML, attributs ARIA, navigation, design)",
             "Bonne pratiques de performances (Utilisation des ressources asynchrones ou différées, traitement des images, minifications des ressources statiques)"
         ],
-        "imageURL": "../../../public/assets/optimisationDebug.png",
+        "imageURL": "../src//assets/optimisationDebug.png",
         "gitHubLink": "https://github.com/Arnaud-Goguelin/OC_Projet5_Debug_Optimisation_Portfolio_Photographe",
         "deployedApp": "https://arnaud-goguelin.github.io/OC_Projet5_Debug_Optimisation_Portfolio_Photographe/",
         "tags": [
@@ -78,7 +78,7 @@
             "Connaissances de bases Annimation CSS",
             "Création de Hooks personnalisés"
         ],
-        "imageURL": "../../../public/assets/appliReact.png",
+        "imageURL": "../src//assets/appliReact.png",
         "gitHubLink": "https://github.com/Arnaud-Goguelin/OC_Projet6_React_App_Location_Immo",
         "deployedApp": "https://p6appimmodeployed.pages.dev/",
         "tags": [
@@ -107,7 +107,7 @@
             "Gestion de l'authentification (contrôles des logins, génération de token hashés)",
             "Création d'une base de données, des collections et modèles et configuration des droits d'utilisateurs"
         ],
-        "imageURL": "../../../public/assets/backend.png",
+        "imageURL": "../src/assets/backend.png",
         "gitHubLink": "https://github.com/Arnaud-Goguelin/OC_Projet7_Backend_App_Notation_de_Livres",
         "deployedApp": "https://p7vieuxgrimoirefrontenddeployed.pages.dev/",
         "tags": [

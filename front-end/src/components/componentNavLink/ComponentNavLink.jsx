@@ -62,7 +62,7 @@ function ComponentNavLink({title, imageName}) {
             className={'nav__navLink'}
 
         >
-            <img src={`/assets/${imageName}`} alt='' /> {title}
+            <img src={`../src/assets/${imageName}`} alt='' /> {title}
         </NavLink>
       </div>
     )
