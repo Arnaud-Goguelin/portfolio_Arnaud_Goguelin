@@ -1,15 +1,15 @@
 @use '../../variables';
 
 .errorPage {
-    height: 600px;
+    height: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    color: variables.$third-color;
+    color: variables.$fourth-color;
 
     > :first-child {
-        font-size: 18em;
+        font-size: 10em;
         font-weight: 700;
 
         // @media (max-width: variables.$medium-screen) {
@@ -36,10 +36,34 @@
         // }
     }
 
-    >a, a:visited {
-        font-size: 1em;
+    a {
+        position: relative;
+        font-size: 2em;
         text-decoration: none;
-        text-decoration-line: underline;
-        color: variables.$third-color;
+        color: variables.$fourth-color;
+        z-index: 2;
+        text-decoration: underline;
+
+        &:hover {
+            color: variables.$second-color;
+            text-decoration: none;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1.3em;
+            background-color: variables.$third-color;
+            opacity: 0.5;
+            transition: width 0.3s ease;
+        }
+
+        &:hover::after {
+            width: 101%;
+        }
     }
 }

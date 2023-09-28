@@ -8,7 +8,7 @@ function Error() {
         <div className='errorPage'>
             <p>404</p>
             <p>La page que vous demandez n'existe pas</p>
-            <Link to='/' aria-label={'Retourner à la page d\'accueil'}>Retourner sur la page d'accueil</Link>
+            <Link to='/' aria-label={'Retourner à la page d\'accueil'}>Retour sur la page d'accueil</Link>
         </div>
     )
 }
