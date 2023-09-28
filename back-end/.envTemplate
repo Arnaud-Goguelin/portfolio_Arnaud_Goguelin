@@ -1,0 +1,6 @@
+-- server.js --
+PORT = port utilisé de préférence et sur lequel le server écoute les requêtes.
+
+-- Dossier Controllers : messageController.js --
+MJ_APIKEY_PUBLIC= clef public de connexion à Mailjet
+MJ_APIKEY_PRIVATE= clef privé de connexion à Mailjet
