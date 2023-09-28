@@ -5,5 +5,4 @@ exports.sanitizer = perfectExpressSanitizer.clean({
 	noSql: true,
 	sql: false,
 	level: 5,
-	// forbiddenTags: [ '.execute', '\'\'', '--', '<script>', 'ls -la', /\d=\d/gm ],
 });

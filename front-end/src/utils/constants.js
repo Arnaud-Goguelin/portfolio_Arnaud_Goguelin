@@ -1,6 +1,6 @@
-const apiURL = 'http://localhost:5173/';
+const apiURL = 'http://localhost:4000';
 export const apiRoutes = {
-  postMessage: `${apiURL}/api/message/postMessage`,
+  postMessage: `${apiURL}/api/Contact`,
 };
 
 export const appRoutes = {

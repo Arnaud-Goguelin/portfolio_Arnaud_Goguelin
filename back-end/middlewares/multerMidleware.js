@@ -1,5 +1,6 @@
 const multer = require('multer');
 
-const storage = multer.memoryStorage();
+const upload = multer()
 
-module.exports = multer({storage}).single('image');
+//ici multer n'acceptera que les textes
+module.exports = upload.none();
