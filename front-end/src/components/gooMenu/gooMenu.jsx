@@ -2,9 +2,9 @@ import { useRef } from 'react'
 import { Link } from 'react-router-dom'
 
 import './gooMenu.scss'
-import menu from '../../assets/menu.png'
-import gitHubLogo from '../../assets/github.png'
-import linkedInLogo from '../../assets/linkedin.png'
+import menu from '../../assets/menu.webp'
+import gitHubLogo from '../../assets/github.webp'
+import linkedInLogo from '../../assets/linkedin.webp'
 import {linkToLinkedIn , linkToGitHub} from '../../utils/constants'
 
 

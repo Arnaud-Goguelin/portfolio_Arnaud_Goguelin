@@ -1,22 +1,22 @@
 [
     {
         "title": "Accueil",
-        "imageName": "accueil.png"
+        "imageName": "accueil.webp"
     },
     {
         "title": "Profil",
-        "imageName": "profil.png"
+        "imageName": "profil.webp"
     },
     {
         "title": "Projets",
-        "imageName": "project.png"
+        "imageName": "project.webp"
     },
     {
         "title": "Objectifs",
-        "imageName": "objectives.png"
+        "imageName": "objectives.webp"
     },
     {
         "title": "Contact",
-        "imageName": "contact.png"
+        "imageName": "contact.webp"
     }
 ]
