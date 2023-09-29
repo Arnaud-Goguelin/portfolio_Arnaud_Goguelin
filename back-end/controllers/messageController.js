@@ -2,7 +2,6 @@
 const Mailjet  = require('node-mailjet')
 require('dotenv').config();
   
-
 exports.postMessage = async (req, res) => {
 	try {
 
@@ -50,6 +49,3 @@ exports.postMessage = async (req, res) => {
 		return res.status(400).json({message :`Erreur lors de l\'envoi de l\'e-mail: ${error}`});
 	}
 };
-
-// .usingPlugin(validator.isEmail, 'L\'identifiant doit être un email');
-

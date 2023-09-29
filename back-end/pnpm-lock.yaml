@@ -26,9 +26,6 @@ dependencies:
   node-mailjet:
     specifier: ^6.0.4
     version: 6.0.4
-  nodemailer:
-    specifier: ^6.9.5
-    version: 6.9.5
   perfect-express-sanitizer:
     specifier: ^1.0.13
     version: 1.0.13
@@ -1061,11 +1058,6 @@ packages:
       url-join: 4.0.1
     transitivePeerDependencies:
       - debug
-    dev: false
-
-  /nodemailer@6.9.5:
-    resolution: {integrity: sha512-/dmdWo62XjumuLc5+AYQZeiRj+PRR8y8qKtFCOyuOl1k/hckZd8durUUHs/ucKx6/8kN+wFxqKJlQ/LK/qR5FA==}
-    engines: {node: '>=6.0.0'}
     dev: false
 
   /object-assign@4.1.1:

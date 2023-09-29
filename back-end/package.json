@@ -19,7 +19,6 @@
     "helmet": "^7.0.0",
     "multer": "1.4.5-lts.1",
     "node-mailjet": "^6.0.4",
-    "nodemailer": "^6.9.5",
     "perfect-express-sanitizer": "^1.0.13",
     "validator": "^13.11.0"
   },

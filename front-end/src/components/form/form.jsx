@@ -1,7 +1,6 @@
-import { useRef, useState } from 'react'
-import { Navigate } from 'react-router-dom';
+import { useRef } from 'react'
 
-import { apiRoutes, appRoutes } from '../../utils/constants';
+import { apiRoutes } from '../../utils/constants';
 
 import ComponentButton from '../componentButton/componentButton'
 import './form.scss'
@@ -22,12 +21,10 @@ function Form() {
             method: 'POST',
             body: newMessage,
         });
-
-        console.log(answerAPIPostMessage)
-           
+          
         if (answerAPIPostMessage.ok === true) {
-            // <Navigate to={appRoutes.contact}/>
             okMessage.current.style.display = 'inline'
+            form.current.reset()
         } else {
             errorMessage.current.style.display = 'inline'
         }
