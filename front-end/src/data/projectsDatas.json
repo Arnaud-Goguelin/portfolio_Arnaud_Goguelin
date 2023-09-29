@@ -9,7 +9,7 @@
             "Intégration de contenu conformément à une maquette",
             "Intégrer une interface responsive",
             "Maîtrise de HTML et CSS",
-            "Connaissances de bases de GitHub"
+            "Maîtrise de GitHub"
         ],
         "imageURL": "../src/assets/integrationResponsive.avif",
         "gitHubLink": "https://github.com/Arnaud-Goguelin/OC_Projet2_Booki",
@@ -27,7 +27,7 @@
         "difficulties": "Utilisation des syntaxes modernes (ajout/suppression d'attributs par exemple) et choix de la méthode 'for' appropriée (for, for in, for of, forEach).",
         "solutions": "Lecture de la documentations et essaies dans le code pour mieux comprendre le fonctionnement des méthodes.",
         "skills": [
-            "Connaissances de bases de JavaScript",
+            "Maîtrise de JavaScript",
             "Manipulation des objets JavaScript",
             "Manipuler les éléments du DOM",
             "Gérer les évènements",
@@ -73,9 +73,9 @@
         "difficulties": "La manque d'informations sur la maquette et dans l'énnoncé du projet.",
         "dolutions": "Prises d'initiatives et création de composants supplémentaires (pagination, carousel au défilement automatique, préparation à l'utilisation d'une API) pour une application plus ergonomique",
         "skills": [
-            "Connaissances de bases React",
-            "Connaissances de bases Sass",
-            "Connaissances de bases Annimation CSS",
+            "Maîtrise de React",
+            "Maîtrise de Sass",
+            "Maîtrise de Annimation CSS",
             "Création de Hooks personnalisés"
         ],
         "imageURL": "../src//assets/appliReact.avif",
@@ -97,7 +97,7 @@
         "difficulties": "Traitement des images et récupération d'un fichier au nom unique",
         "solutions": "Rattacher les propriétés des objets à la requête",
         "skills": [
-            "Connaissances de bases de Node.JS et Express",
+            "Maîtrise de Node.JS et Express",
             "Mettre en œuvre des opérations CRUD",
             "Stocker des données",
             "Bonnes pratiques de green IT via le traitement d'image",
@@ -118,19 +118,28 @@
     {
         "id": "db5dbf0bec429647",
         "title": "Mon Portfolio",
-        "description": "string",
-        "difficulties": "string",
-        "solutions": "string",
+        "description": "Création de mon portfolio: front-end en React et backe-end en Node.js",
+        "difficulties": "Design et conception de l'interface de chaque page.",
+        "solutions": "Création des spécificités fonctionnelles et de wireframes.",
         "skills": [
-            "string",
-            "string"
+            "Maitrise de React",
+            "Maîtrise de Sass",
+            "Maîtrise de bases d'annimation CSS",
+            "Maîtrise de Node.JS et Express",
+            "Sécurisation d'une application web (limiter, sanitizer, validator)",
+            "Utilisation de libraires JS"
         ],
-        "imageURL": "string",
+        "imageURL": "../src/assets/monPortfolio.avif",
         "gitHubLink": "string",
+        "deployedApp": "string",
         "tags": [
             "Tous",
-            "string",
-            "string"
+            "React",
+            "Accessibilité",
+            "Responsive",
+            "Sass",
+            "Back-end",
+            "Node.JS"
         ]
     }
 ]
