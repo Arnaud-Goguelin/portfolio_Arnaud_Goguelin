@@ -5,34 +5,20 @@
     height: 500px;
     aspect-ratio: 1;
     border-radius: 10px;
-    border: 1px solid rgba(0, 0, 0, 0.7);
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent 30%);
     position: relative;
 
     &:hover {
         background: none;
     }
 
-    // @media (max-width: calc(variables.$extraLarge-screen - 1px)) {
-    //     margin: 20px;
-    // }
+    @media (max-width: variables.$large-screen) {
+        width: 90%;
+    }
 
-    // @media (max-width: variables.$large-screen) {
-    //     width: 300px;
-    //     height: 300px;
-    //     margin: 20px auto;
-    // }
+    @media (max-width: variables.$medium-screen) {
+        margin: 20px auto;
+    }
 
-    // @media (max-width: variables.$medium-screen) {
-    //     width: 400px;
-    //     height: 300px;
-    // }
-
-    // @media (max-width: variables.$small-screen) {
-    //     width: 335px;
-    //     height: 255px;
-    //     margin: 25px auto 0 auto;
-    // }
 
 
     .card__image {
@@ -40,15 +26,30 @@
         height: 100%;
         object-fit: cover;
         border-radius: 10px;
-        mix-blend-mode: darken;
     }
 
     .card__text {
-        width: 100%;
+        display: flex;
         position: absolute;
-        left: 20px;
-        bottom: 10px;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent 30%);
         color: variables.$second-color;
         font-size: 1em;
+        text-align: start;
+
+        >span {
+            margin: 10px 0 0 20px
+        }
+
+        &.hovered {
+            display: none;
+            background-color: rgba(0, 0, 0, 0.5);
+            font-size: 1.5em;
+            font-weight: 500;
+        }
     }
 }

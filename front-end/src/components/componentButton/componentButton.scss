@@ -4,7 +4,7 @@ button {
     font-size: 1em;
     font-weight: 400;
     color: variables.$second-color;
-    text-align: left;
+    text-align: center;
     background-color: variables.$fourth-color;
 
     border-radius: 50px;
@@ -28,17 +28,5 @@ button {
         color: variables.$fourth-color;
         border: 1px solid rgba(0, 0, 0, 0.3);
     }
+
 }
-
-// @media (max-width: variables.$large-screen) {
-//     padding: 5px 30px;
-// }
-
-// @media (max-width: variables.$medium-screen) {
-//     padding: 5px 20px;
-// }
-
-// @media (max-width: variables.$small-screen) {
-//     padding: 5px 5px;
-//     font-size: 0.8em;
-// }

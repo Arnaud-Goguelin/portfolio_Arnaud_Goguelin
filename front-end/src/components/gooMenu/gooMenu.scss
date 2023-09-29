@@ -4,22 +4,31 @@
     filter: url(./gooFilter.svg#goo);
     text-align: center;
     cursor: pointer;
+
+    @media (max-width: variables.$small-screen ) {
+        display: flex;
+    }
 }
 
 .goo_item {
     background: variables.$third-color;
     color: variables.$second-color;
     border-radius: 50%;
-    color: variables.$second-color;
-    font-size: 2em;
-    font-weight: 700;
     aspect-ratio: 1;
     height: 100px;
-    line-height: 100px;
     margin: -100px 0 0 0;
     position: relative;
     transition: all 0.5s ease;
     z-index: 0;
+
+    @media (max-width: variables.$large-screen) {
+        height: 80px;
+        margin: -80px 0 0 0;
+    }
+
+    @media (max-width: variables.$small-screen ) {
+        margin: 0 -80px 0 0;
+    }
 }
 
 .goo-click {
@@ -33,7 +42,6 @@
 
 .goo-click:hover {
     background: variables.$second-color;
-    color: variables.$fourth-color;
     border: 1px solid rgba(0, 0, 0, 0.5);
 }
 
@@ -44,6 +52,11 @@
         margin: 25px 0 0 0;
         height: 45px;
         aspect-ratio: 1;
+
+        @media (max-width: variables.$large-screen) {
+            height: 35px;
+            margin: 20px 0 0 0;
+        }
     }
 }
 
@@ -51,7 +64,6 @@
 .goo_box.active {
     .goo-click, .goo-02 {
         background: variables.$second-color;
-        color: variables.$fourth-color;
     }
 
     .goo-click {
@@ -61,4 +73,9 @@
 
 .goo_box.active .goo_item {
     margin: 10px 0 0 0;
+
+    @media (max-width: variables.$large-screen) {
+        margin: 0 10px 0 0;
+    }
+
 }

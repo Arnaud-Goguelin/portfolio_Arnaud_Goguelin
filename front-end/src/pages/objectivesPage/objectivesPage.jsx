@@ -45,37 +45,39 @@ function ObjectivesPage() {
                 text='Choissisez une spécialisation'
             />
 
-            <div 
-                className='objectivesPage__buttonsContainer'
-                ref={buttonsContainer}
-            >
-                {
-                    arrayForFilters.map(specialization => (
-                        <ComponentButton 
-                            key={arrayForFilters.indexOf(specialization)}
-                            content={specialization}
-                            onClick={(event) => {
-                                handleActiveClass(event,buttonsContainer);
-                                setChoosenSpecializations(event.target.textContent);
-                            }}
-                        />
-                    ))
-                }
-            </div>
-
             <div className='objectivesPage__content'>
+                <div 
+                    className='objectivesPage__buttonsContainer'
+                    ref={buttonsContainer}
+                >
+                    {
+                        arrayForFilters.map(specialization => (
+                            <ComponentButton 
+                                key={arrayForFilters.indexOf(specialization)}
+                                content={specialization}
+                                onClick={(event) => {
+                                    handleActiveClass(event,buttonsContainer);
+                                    setChoosenSpecializations(event.target.textContent);
+                                }}
+                            />
+                        ))
+                    }
+                </div>
 
-                {
-                    objectivesDatas.map(objective => (
-                        <TextDisplay
-                        key={objective.id}
-                        titleLevel={4}
-                        title={objective.timeLimit}
-                        lists={choosenSpecialization ? getObjectives(objective) : null}
-                        page='Objectives'
-                        />
-                    ))
-                }
+                <div className='objectivesPage__objectives'>
+
+                    {
+                        objectivesDatas.map(objective => (
+                            <TextDisplay
+                            key={objective.id}
+                            titleLevel={4}
+                            title={objective.timeLimit}
+                            lists={choosenSpecialization ? getObjectives(objective) : null}
+                            page='Objectives'
+                            />
+                        ))
+                    }
+                </div>
             </div>
 
         </section>

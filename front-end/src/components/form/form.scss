@@ -7,7 +7,6 @@ form {
     justify-content: center;
     height: 100%;
     width: 100%;
-    border: 2px solid red;
 
     .AllInputsNameContainer {
         display: flex;
@@ -15,12 +14,21 @@ form {
         align-items: center;
         width: 100%;
 
+        @media (max-width: variables.$small-screen ) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
         .oneInputNameContainer {
             width: 45%;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: flex-start;
+
+            @media (max-width: variables.$small-screen ) {
+                width: 100%;
+            }
 
             input {
                 width: 100%;
@@ -31,6 +39,10 @@ form {
     label {
         color: black;
         font-size: 1.2em;
+
+        @media (max-width: variables.$small-screen ) {
+            font-size: 1em;
+        }
     }
 
     input, textarea {
@@ -41,6 +53,11 @@ form {
 
         font-size: 1em;
         font-family: variables.$first-font-family;
+
+        @media (max-width: variables.$small-screen ) {
+            margin: 5px 0 10px 0;
+            padding: 5px;
+        }
 
         &::placeholder {
             font-size: 1em;
@@ -63,6 +80,11 @@ form {
     textarea {
         height: 40%;
         width: 100%;
+
+        @media (max-width: variables.$small-screen ) {
+            height: 60%;
+            width: 100%;
+        }
     }
 
     .confirmationMessage, .errorMessage {
