@@ -8,26 +8,26 @@
 
     100% {
         letter-spacing: initial;
-        background: rgba(255, 255, 255, 1);
+        background-color: rgba(255, 255, 255, 1);
         filter: blur(0px) contrast(1);
     }
 }
 
 
 .landingPage {
-    position: relative;
-    top: -50px;
-    width: 80vw;
-    height: 40vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    ;
+
+
+    @media (max-width: variables.$small-screen ) {
+        margin: 70px 0 0 0;
+    }
 
     &__gooTitle {
-        position: relative;
-        top: -50px;
+        margin: 0 auto;
         padding: 10px 0;
         box-shadow: 5px 5px 10px 5px #FFFF;
         border-radius: 25px;
@@ -36,6 +36,11 @@
         animation: moveFont 5s forwards;
         filter: url(./gooFilter.svg#goo);
 
+        @media (max-width: variables.$large-screen - 1) {
+            top: 0;
+            width: 90%;
+        }
+
         h1 {
             width: 100%;
             font-weight: 1000;
@@ -43,20 +48,42 @@
             font-family: variables.$second-font-family;
             letter-spacing: 0px;
             animation: all ease-in-out 2s;
+            text-align: start;
 
-            span {
-                margin: 0 0 0 47%;
+            // @media (min-width: variables.$medium-screen ) {
+            .leftText {
+                text-align: start;
+                float: left;
+            }
+
+            .rightText {
+                text-align: end;
+                float: right;
+            }
+
+            // }
+
+            @media (max-width: variables.$small-screen ) {
+                font-size: 2em;
+            }
+
+            @media (max-width: variables.$small-screen ) {
+                font-size: 1.5em;
             }
         }
     }
 
     &__content {
-        margin: auto;
+        margin: 20px auto;
 
         p {
             margin: 0 0 20px 0;
             font-size: 1.5em;
             line-height: 1.5;
+
+            @media (max-width: variables.$small-screen ) {
+                font-size: 1em;
+            }
         }
 
         strong {
@@ -94,6 +121,23 @@
         font-size: 2em;
         font-weight: 800;
         color: variables.$third-color;
+
+        @media (max-width: variables.$small-screen ) {
+            font-size: 1.5em;
+        }
     }
 
 }
+
+// @media (max-width: variables.$medium-screen) {
+//     flex-direction: column;
+//     margin: 0 0 30px 0;
+// }
+
+// >div {
+//     width: 47%;
+
+//     @media (max-width: variables.$medium-screen) {
+//         width: 100%;
+//     }
+// }

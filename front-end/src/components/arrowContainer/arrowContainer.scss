@@ -1,17 +1,33 @@
+@use '../../variables';
+
 .arrowContainer {
     margin: auto;
-    width: 50%;
+    width: 60%;
     height: 50px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     font-size: 1.2em;
 
+    @media (max-width: variables.$large-screen ) {
+        width: 100%;
+        font-size: 1em;
+    }
+
+    @media (max-width: variables.$small-screen ) {
+        margin: 25px auto 0 auto;
+
+    }
+
+    @media (max-width: variables.$medium-screen ) {
+        display: none;
+    }
+
     .arrow {
         width: 20px;
         height: 20px;
-        border-top: 4px solid black;
-        border-right: 4px solid black;
+        border-top: 3px solid variables.$third-color;
+        border-right: 3px solid variables.$third-color;
 
         &.right {
             rotate: 45deg;
@@ -19,6 +35,17 @@
 
         &.left {
             rotate: 225deg
+        }
+
+        @media (max-width: variables.$extraLarge-screen ) {
+            width: 15px;
+            height: 15px;
+        }
+    }
+
+    p {
+        @media (max-width: variables.$extraLarge-screen ) {
+            text-align: center;
         }
     }
 }

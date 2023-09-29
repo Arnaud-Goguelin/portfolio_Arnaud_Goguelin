@@ -13,21 +13,25 @@ function ProfilPage() {
     const [distance, setDistance] = useState(0);
     const [position, setPosition] = useState(0)
 
+
+    //Récupère de la distance entre le centrer de mobileContent est le bord gauche de l'écran   
     function calculDistance() {
         const contentToMove = mobileContent.current
         const rect = contentToMove.getBoundingClientRect();
         setDistance(rect.left)}
 
     useEffect(()=>{
-            calculDistance()
+        calculDistance();
     },[]) 
 
+    //Déplace les composants de droite à gauche en fonction des mouvements de la souris
     function handleMouseMouve(event) {
         const contentToMove = mobileContent.current
         const contentMeasured = contentToMove.childNodes[0].scrollWidth
         contentToMove.style.left = event.pageX - Math.abs(distance) - contentMeasured + 'px';
     }
 
+    //Idem avec le clavier
     function handleKeyDown(event) {
         const contentToMove = mobileContent.current;
         const rect = contentToMove.getBoundingClientRect();
@@ -43,7 +47,6 @@ function ProfilPage() {
         }
     }
 
-
     return (
         <section 
             className='profilPage'
@@ -53,7 +56,7 @@ function ProfilPage() {
         >
 
         <ArrowContainer
-            text='Défilement aux mouvements de la souris ou au clavier'
+            text= {'Défilement aux mouvements de la souris ou au clavier'}
         />
             
             <div 
@@ -67,6 +70,7 @@ function ProfilPage() {
                         title={data.title}
                         paragraphs={data.paragraphs}
                         lists={data.skills}
+                        page='Profil'
                     />
                 ))}
             </div>
@@ -77,4 +81,3 @@ function ProfilPage() {
 
 export default ProfilPage
 
-// Ce composant React génère deux TextDisplay. Je souhaite apporter des modifications SCSS au premier composant seulement, et ce directement dans le code SCSS.

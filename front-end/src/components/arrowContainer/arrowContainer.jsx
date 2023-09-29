@@ -6,10 +6,10 @@ function ArrowContainer ({text}) {
 
     return (
         <div className='arrowContainer'>
-        <div className='arrow left'></div>
-        <p>{text}</p>
-        <div className='arrow right'></div>
-    </div>
+            <div className='arrow left'></div>
+            <p>{text}</p>
+            <div className='arrow right'></div>
+        </div>
     )
 }
 

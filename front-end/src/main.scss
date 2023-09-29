@@ -66,16 +66,35 @@ table {
       rgba(255, 255, 255, 1)70%),
     url(./noiseFilter.svg);
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
 }
 
 .globalStyle {
+  margin: 170px 0 0 0;
   font-family: variables.$first-font-family;
   font-weight: 300;
   font-size: 1em;
+  max-width: variables.$extraLarge-screen;
 
-  @media (max-width: calc(variables.$extraLarge-screen - 1px)) {
+  @media (max-width: variables.$extraLarge-screen) {
     width: 90%;
+  }
+
+  @media (max-width: variables.$large-screen) {
+    margin: 120px 0 0 0;
+  }
+
+  @media (max-width: variables.$medium-screen) {
+    margin: 100px 0 0 0;
+  }
+
+  @media (max-width: variables.$small-screen) {
+    margin: 50px 0 0 0;
+  }
+
+  @media (max-width: variables.$extraSmall-screen) {
+    margin: 90px 0 0 0;
   }
 }

@@ -72,6 +72,7 @@ function ObjectivesPage() {
                         titleLevel={4}
                         title={objective.timeLimit}
                         lists={choosenSpecialization ? getObjectives(objective) : null}
+                        page='Objectives'
                         />
                     ))
                 }

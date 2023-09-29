@@ -5,10 +5,10 @@
     width: 100%;
     margin: 0 20px;
     transition: height 500ms ease-in;
+    font-size: 1em;
 
-    p, li {
+    p {
         margin: 0 0 20px 0;
-        font-size: 1em;
     }
 
     ul {
@@ -19,4 +19,5 @@
         overflow: hidden;
         transition: height 0.5s ease-in-out;
     }
+
 }

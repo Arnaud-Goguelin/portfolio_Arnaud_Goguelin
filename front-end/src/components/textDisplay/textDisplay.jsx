@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 import './textDisplay.scss'
 
-function TextDisplay({ titleLevel, title, paragraphs, lists }) {
+function TextDisplay({ titleLevel, title, paragraphs, lists, page }) {
 
     //Création d'un niveau de titre adaptable
     const Title = `h${titleLevel}`;
@@ -32,7 +32,7 @@ function TextDisplay({ titleLevel, title, paragraphs, lists }) {
 
                 <ul 
                 ref={listsRef}
-                style={{ height: customHeight }}
+                style={ page === 'Profil' ? {height: 'auto' } : {height: customHeight }}
                 >
                     {!lists ? null
                     :
