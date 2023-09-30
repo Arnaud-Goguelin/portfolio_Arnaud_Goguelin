@@ -4,3 +4,5 @@ PORT = port utilisé de préférence et sur lequel le server écoute les requêt
 -- Dossier Controllers : messageController.js --
 MJ_APIKEY_PUBLIC= clef public de connexion à Mailjet
 MJ_APIKEY_PRIVATE= clef privé de connexion à Mailjet
+SENDER_EMAIL= boîte mail d'envoie du message du formulaire
+RECEIVER_EMAIL= boîte mail de réception du message du formulaire

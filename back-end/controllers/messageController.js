@@ -20,12 +20,12 @@ exports.postMessage = async (req, res) => {
 			Messages: [
 			  {
 				From: {
-				  Email: 'goguelin.portfolio@gmail.com',
+				  Email: process.env.SENDER_EMAIL,
 				  Name: 'portfolio',
 				},
 				To: [
 				  {
-					Email: 'arnaud.goguelin@gmail.com',
+					Email: process.env.RECEIVER_EMAIL,
 					Name: 'Arnaud',
 				  },
 				],
