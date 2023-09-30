@@ -28,7 +28,7 @@
     .arrowContainer {
         position: relative;
         margin: 0 auto;
-        bottom: -50px;
+        bottom: -45px;
         font-size: 1em;
         width: 30%;
 
@@ -94,9 +94,10 @@
 
     &__objectives {
         width: 100%;
-        margin: 0 auto;
+        margin: 30px auto;
 
         @media (max-width: variables.$large-screen) {
+            margin: 0 auto;
             width: 70%;
         }
 
