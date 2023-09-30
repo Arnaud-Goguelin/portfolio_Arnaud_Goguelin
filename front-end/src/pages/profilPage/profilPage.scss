@@ -7,10 +7,13 @@
     cursor: col-resize;
     overflow: hidden;
 
+    @media (max-width: variables.$medium-screen ) {
+        cursor: auto;
+    }
+
     @media (max-width: variables.$small-screen ) {
         margin: 80px 0 0 0;
         width: 90%;
-        height: 100%;
     }
 
     &__mobile {
@@ -25,13 +28,31 @@
         left: -50%;
 
         @media (max-width: variables.$medium-screen ) {
+            // Penser à modifier la correspondance profipage.jsx 
+            // pour neutraliser la fonction handleMouseMouve
             flex-direction: column;
+            justify-content: flex-start;
             align-items: center;
-            height: auto;
             width: 90%;
             left: 0;
             margin: 0 auto;
             font-size: 0.8em;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            scrollbar-width: thin;
+            scrollbar-color: variables.$third-color variables.$second-color;
+
+            &::-webkit-scrollbar {
+                height: 8px;
+            }
+
+            &::-webkit-scrollbar-track {
+                background-color: variables.$second-color;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: variables.$third-color;
+            }
         }
 
         h2 {

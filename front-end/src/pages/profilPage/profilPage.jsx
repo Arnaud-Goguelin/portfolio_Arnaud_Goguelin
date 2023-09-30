@@ -26,9 +26,15 @@ function ProfilPage() {
 
     //Déplace les composants de droite à gauche en fonction des mouvements de la souris
     function handleMouseMouve(event) {
-        const contentToMove = mobileContent.current
-        const contentMeasured = contentToMove.childNodes[0].scrollWidth
-        contentToMove.style.left = event.pageX - Math.abs(distance) - contentMeasured + 'px';
+        // si la largeur d'écran est de 768px ne rien faire (cf code scss)
+        if (window.matchMedia('(max-width: 768px)').matches) {
+            return null
+        // sinon lier le déplacement de contentToMove au mouvement de la souris
+          } else {
+            const contentToMove = mobileContent.current
+            const contentMeasured = contentToMove.childNodes[0].scrollWidth
+            contentToMove.style.left = event.pageX - Math.abs(distance) - contentMeasured + 'px';
+          } 
     }
 
     //Idem avec le clavier
@@ -80,4 +86,3 @@ function ProfilPage() {
 }
 
 export default ProfilPage
-
