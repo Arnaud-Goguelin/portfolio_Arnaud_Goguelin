@@ -1,7 +1,7 @@
 import './header.scss'
 
 import navDatas from '../../data/navDatas.json'
-import ComponentNavLink from '../ComponentNavLink/ComponentNavLink'
+import ComponentNavLink from '../componentNavLink/componentNavLink'
 
 function Header() {
 
