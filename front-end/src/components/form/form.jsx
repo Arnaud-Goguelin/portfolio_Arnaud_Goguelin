@@ -17,11 +17,11 @@ function Form() {
         const formCompleted = form.current
         const newMessage = new FormData(formCompleted)
 
-        const answerAPIPostMessage = await fetch (apiRoutes.postMessage, {
+        const answerAPIPostMessage = await fetch(apiRoutes.postMessage, {
             method: 'POST',
             body: newMessage,
         });
-          
+
         if (answerAPIPostMessage.ok === true) {
             okMessage.current.style.display = 'inline'
             form.current.reset()
@@ -31,62 +31,62 @@ function Form() {
 
     }
 
-    return(
-        <form  
+    return (
+        <form
             ref={form}
             method='post'
             action={apiRoutes.postMessage}
             encType='multipart/form-data'
             onSubmit={event => postMessage(event)}
         >
-            
+
             <div className='AllInputsNameContainer'>
                 <div className='oneInputNameContainer'>
                     <label htmlFor='firstname'>Nom</label>
-                    <input 
+                    <input
                         id='firstname'
                         name='firstname'
-                        type='text' 
-                        placeholder={'ex: Pratchett'} 
+                        type='text'
+                        placeholder={'Vous pouvez écrire votre nom ici.'}
                         required
                     />
                 </div>
                 <div className='oneInputNameContainer'>
                     <label htmlFor='lastname'>Prénom</label>
-                    <input 
-                        id='lastname' 
+                    <input
+                        id='lastname'
                         name='lastname'
-                        type='text' 
-                        placeholder={'ex: Terry'}
+                        type='text'
+                        placeholder={'Vous pouvez écrire votre prénom ici.'}
                     />
                 </div>
             </div>
 
             <label htmlFor='email'>Email</label>
-            <input 
-                id='email' 
-                type='email' 
+            <input
+                id='email'
+                type='email'
                 name='email'
-                placeholder={'leBagage@universiteDeLInvisible.dw'} 
-                required 
+                placeholder={'exemple@webservices.com'}
+                required
             />
 
             <label htmlFor='message'>Message</label>
-            <textarea 
-                id='message' 
+            <textarea
+                id='message'
                 type='text'
                 name='message'
-                placeholder={'ex : Le monde est un disque, plat, posé sur le dos de quatres gigantesques éléphants, eux-mêmes juchés sur le dos de la grande Chelys galactica : A’Tuin... '} 
+                placeholder={'Vous pouvez écrire votre message ici. '}
                 required
-                />
+            />
 
-            <ComponentButton 
+            <ComponentButton
                 content={'Envoyer'}
                 type="submit"
             />
             <p className='confirmationMessage' ref={okMessage}>Message Envoyé!</p>
             <p className='errorMessage' ref={errorMessage}> Une erreure est survenue.</p>
-        
+
         </form>
 
     )
