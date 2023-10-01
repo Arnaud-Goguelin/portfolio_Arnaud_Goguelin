@@ -62,7 +62,7 @@ function ComponentNavLink({title, imageName}) {
             className={'nav__navLink'}
 
         >
-            <img src={`../src/assets/${imageName}`} alt='' /> <span>{title}</span>
+            <img src={`../src/assets/${imageName}.webp`} alt={`Aller vers ${imageName}`} /> <span>{title}</span>
         </NavLink>
       </div>
     )

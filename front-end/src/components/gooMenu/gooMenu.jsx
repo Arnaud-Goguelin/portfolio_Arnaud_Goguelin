@@ -30,14 +30,14 @@ function GooMenu() {
                     onClick={(event) => handleClick(event)}
                 >
                     <div className="inner">
-                    <img src={menu} alt='' />
+                    <img src={menu} alt='Icone de menu déroulant' />
                 </div>
                 </div>
                 <div className="goo_item goo-01">
-                    <Link className='inner' to={linkToGitHub} target='_blank'><img src={gitHubLogo} alt="" /></Link>
+                    <Link className='inner' to={linkToGitHub} target='_blank'><img src={gitHubLogo} alt="Aller vers mon profil GitHub" /></Link>
                 </div>
                 <div className="goo_item goo-02">
-                    <Link className='inner' to={linkToLinkedIn} target='_blank'><img src={linkedInLogo} alt="" /></Link>
+                    <Link className='inner' to={linkToLinkedIn} target='_blank'><img src={linkedInLogo} alt="Aller vers mon profil LinkedIn " /></Link>
                 </div>
 
             </div>

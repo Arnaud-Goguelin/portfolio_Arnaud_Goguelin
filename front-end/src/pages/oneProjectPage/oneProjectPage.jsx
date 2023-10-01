@@ -20,10 +20,10 @@ function OneProjectPage() {
             return (
                 <section className='oneProjectPage'>
                     
-                    <Link to='/Projets' className='oneProjectPage__returnLink'><img src={backArrow} className='arrow' alt="" /><span className='text'>Retour à la Galerie</span></Link>
+                    <Link to='/Projets' className='oneProjectPage__returnLink'><img src={backArrow} className='arrow' alt='Icone de retour vers la gallerie' /><span className='text'>Retour à la Galerie</span></Link>
 
                     <div className='oneProjectPage__content'>
-                        <img className='oneProjectPage__projectImage' src={project.imageURL} alt="" />
+                        <img className='oneProjectPage__projectImage' src={project.imageURL} alt='Présentation du site en ligne' />
 
                         <div className='oneProjectPage__description'>
                             <h3>{project.title}</h3>
@@ -38,8 +38,8 @@ function OneProjectPage() {
                             <p>{project.difficulties}</p>
                             <p className='staticContent'>Solutions apportées</p>
                             <p>{project.solutions}</p>
-                            <Link to={project.gitHubLink} target='_blank'><img src={gitHubLogo} alt="" /></Link>
-                            <Link to={project.deployedApp} target='_blank'><img src={linkImage} alt="" /></Link>
+                            <Link to={project.gitHubLink} target='_blank'><img src={gitHubLogo} alt='Aller vers le dépôt GitHub' /></Link>
+                            <Link to={project.deployedApp} target='_blank'><img src={linkImage} alt='Aller vers le site en ligne' /></Link>
                         </div>
                     </div>
 
