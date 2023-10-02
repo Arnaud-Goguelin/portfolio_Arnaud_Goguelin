@@ -53,4 +53,5 @@ TextDisplay.propTypes  = {
     title: PropTypes.string,
     paragraphs: PropTypes.array,
     lists: PropTypes.array,
+    page: PropTypes.string
   }
