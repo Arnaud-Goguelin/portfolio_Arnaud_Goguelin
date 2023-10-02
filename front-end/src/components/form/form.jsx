@@ -22,6 +22,7 @@ function Form() {
             body: newMessage,
         });
 
+
         if (answerAPIPostMessage.ok === true) {
             okMessage.current.style.display = 'inline'
             form.current.reset()

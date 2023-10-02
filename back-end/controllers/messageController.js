@@ -4,7 +4,6 @@ require('dotenv').config();
   
 exports.postMessage = async (req, res) => {
 	try {
-
 		const mailjet = Mailjet.apiConnect(
 			process.env.MJ_APIKEY_PUBLIC,
 			process.env.MJ_APIKEY_PRIVATE,
