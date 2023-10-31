@@ -21,7 +21,7 @@ Organisme de Formation: Openclassrooms
   - Hook personnalisé useFetch à améliorer: en l'état si l'on souhaite faire un autre appel à une API sur un autre fichier de données, il est nécessaire de créer un autre composant provider.
     
 ### Commentaire:
-Votre [carte des compétences](https://miro.com/app/board/uXjVMl3BCl0=/?share_link_id=641828872347) a été très bien réalisée, mettant en lumière l'ensemble des compétences que vous avez acquises tout au long de votre parcours éducatif. 
+*Votre [carte des compétences](https://miro.com/app/board/uXjVMl3BCl0=/?share_link_id=641828872347) a été très bien réalisée, mettant en lumière l'ensemble des compétences que vous avez acquises tout au long de votre parcours éducatif. 
 Il est particulièrement appréciable de voir que vous avez pris soin de trier ces compétences par catégorie, rendant la carte facile à lire et informatif pour quiconque la consulte.
 Vous avez présenté une offre d'emploi spécifique qui concerne NodeJS et React, et il est clair que vous avez fait un excellent choix. 
 Cette offre correspond à la fois à vos compétences techniques et à votre niveau d'expérience, tout en étant également convenable en termes de localisation géographique.
@@ -55,14 +55,14 @@ Le site dresse un profil exhaustif du développeur que vous êtes, en mettant en
 J'ai apprécié que le site ait été développé personnellement par vous, sans recourir à des outils de construction de site no-code. 
 Cela témoigne de votre maîtrise technique et de votre capacité à construire un site depuis sa base.
 Les projets que vous avez présentés sont bien détaillés, offrant une description concise, les défis rencontrés et les solutions apportées, ainsi que les compétences utilisées, complétées par des liens vers le code ou le site correspondant.
-Enfin, j'ai noté que votre site s'affiche correctement sur mobile, assurant ainsi une bonne expérience utilisateur sur différents types d'appareils.
+Enfin, j'ai noté que votre site s'affiche correctement sur mobile, assurant ainsi une bonne expérience utilisateur sur différents types d'appareils.*
 
 **Livrable**
 Points forts :
-Vous avez réalisé un audit LightHouse et avez obtenue un très bon score.
-La stack choisie est pertinante.
+*Vous avez réalisé un audit LightHouse et avez obtenue un très bon score.
+La stack choisie est pertinante.*
 
 **Soutenance**
 Remarques :
-Dans l'ensemble, votre soutenance a été très réussie. Vous avez montré une solide compréhension des différentes technologies que vous avez utilisées, tout en mettant en lumière votre sens de la réflexion stratégique en matière de choix technologiques et de carrière. Votre portfolio est correct, mais vos idées pour des améliorations futures montrent que vous êtes engagé dans une démarche d'apprentissage et d'amélioration continue.
-Félicitation et bon courage pour la suite de votre carrière.
+*Dans l'ensemble, votre soutenance a été très réussie. Vous avez montré une solide compréhension des différentes technologies que vous avez utilisées, tout en mettant en lumière votre sens de la réflexion stratégique en matière de choix technologiques et de carrière. Votre portfolio est correct, mais vos idées pour des améliorations futures montrent que vous êtes engagé dans une démarche d'apprentissage et d'amélioration continue.
+Félicitation et bon courage pour la suite de votre carrière.*
